@@ -1,0 +1,68 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.app-root {
+  height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: system-ui, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--accent-hover);
+  }
+}
+
+.app-body {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+}
+
+.app-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: $spacing-lg;
+  background-color: var(--dashboard-background-color);
+}
+
+.btn {
+  width: 130px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+
+  &.outline {
+    background: transparent;
+    color: var(--outlined-btn-color);
+    border: 1px solid var(--outlined-btn-color);
+
+    &:hover {
+      background-color: var(--outlined-btn-hover-bgcolor);
+    }
+  }
+
+  &.primary {
+    background: var(--filled-btn-background-color);
+    color: var(--filled-btn-color);
+    border: none;
+
+    &:hover {
+      background-color: var(--filled-btn-hover-bgcolor);
+    }
+  }
+}

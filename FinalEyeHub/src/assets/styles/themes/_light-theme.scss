@@ -1,0 +1,301 @@
+@use '../colors/brand' as *;
+@use '../colors/generic' as *;
+@use '../themes/light-palette' as *;
+
+:root {
+  // icons
+  --primary-icon-color: #{$color-generic-greyblue-lighter-20};
+  --secondary-icon-color: #{$color-neutral-white};
+  --tertiary-icon-color: #{$color-light-blue};
+  --refresh-icon-color: #1c5eb7;
+  --header-icon-hover-color: #{$color-brand-blue};
+  --menu-item-icon-color: #43525c;
+  --error-view-icon-color: #1890ff;
+  --top-buttons-icon-color: #{$color-generic-greyblue-lighter-20};
+  --top-buttons-icon-hoverstate-color: #{$color-generic-greyblue-lighter-90};
+  --top-buttons-icon-activestate-color: #{$color-generic-greyblue-lighter-80};
+  --top-buttons-icon-disabledstate-color: #{$color-generic-greyblue-lighter-60};
+  --header-icon-top-hover-bg-color: #{$color-generic-greyblue-lighter-20};
+  --header-icon-hover-bg-color: #{$color-neutral-white};
+  --details-modal-cross-icon: #{$color-generic-greyblue-lighter-15};
+  --note-warning-icon-fill-color: #{$color-light-yellow};
+  --new-feature-cross-icon-fill-color: #{$color-generic-greyblue-lighter-10};
+  --star-icon-fill-color: #{$color-light-red};
+  --cross-icon-fill-color: #{$color-generic-greyblue-lighter-30};
+  --note-alert-icon-fill-color: #{$color-light-red};
+  --whats-new-modal-cross-icon-fill-color: #{$color-generic-greyblue-lighter-15};
+
+  // layouts
+  --header-bg-color: #{$color-generic-white};
+  --dashboard-background-color: #{$color-generic-greyblue-lighter-90};
+  --modal-primary-background-color: #{$color-neutral-white};
+  --details-modal-background-color: #{$color-neutral-white};
+  --primary-background-color: #e5e5e5;
+  --secondary-background-color: #{$color-neutral-white};
+  --tertiary-background-color: #{$color-brand-blue};
+  --select-bg-color-container: #{$color-neutral-white};
+  --note-background-color: #{$color-light-blue-lighter-60};
+  --menu-item-hover-background-color: #eceeef;
+  --help-us-bg-color: #{$color-light-pink-lighter-70};
+  --help-us-hover-bg-color: #{$color-light-pink-lighter-60};
+  --help-us-active-bg-color: #{$color-light-pink-lighter-70};
+  --logout-view-bg-color: #{$color-generic-white};
+  --request-failed-view-bg-color: #{$color-generic-greyblue-lighter-90};
+  --contact-support-help-you-bg-color: #{$color-light-blue-lighter-70};
+  --layout-bg-color: #{$color-generic-greyblue-lighter-90};
+
+  // details modal
+  --tag-background-color: #{$color-generic-greyblue-lighter-80};
+  --modal-filename-color: #2c3e50;
+  --dropdown-option-hover-color: #{$color-generic-greyblue-lighter-80};
+  --dropdown-option-active-color: #{$color-light-blue-lighter-70};
+  --dropdown-option-select-color: #{$color-light-blue-lighter-60};
+  --alert-bg-color: #{$color-light-red-lighter-70};
+
+  // text
+  --primary-text-color: #{$color-generic-greyblue};
+  --secondary-text-color: #{$color-generic-greyblue-lighter-20};
+  --copyright-text-color: #{$color-generic-greyblue-lighter-40};
+  --note-title-color: #{$color-light-blue-darker-40};
+  --note-text-color: #2c3e50;
+  --status-after-deadline: #{$color-light-red};
+  --status-close-deadline: #e46e2c;
+  --filled-btn-background-color: #{$color-light-blue};
+  --filled-btn-color: #{$color-neutral-white};
+  --header-app-name: #139dd8;
+  --header-profile-icon-text-color: #{$color-neutral-white};
+  --header-profile-icon-text-bg-color: #{$color-light-blue};
+  --header-profile-icon-text-hover-bg-color: #{$color-neutral-white};
+  --header-profile-icon-text-hover-color: #{$color-light-blue};
+  --help-us-text-hover-color: #{color-light-pink-darker-20};
+  --help-us-text-active-color: #{color-light-pink-darker-40};
+  --submission-name-text: #{$color-generic-greyblue-lighter-20};
+  --banner-text: #{$color-generic-greyblue-lighter-20};
+  --disabled-btn-text-color: #{$color-generic-greyblue-lighter-90};
+  --outlined-btn-hover-text-color: #{$color-light-blue-darker-20};
+  --outlined-btn-active-text-color: #{$color-light-blue-darker-40};
+  --placeholder-text-color: #{$color-generic-greyblue-lighter-50};
+  --upload-document-link-color: #{$color-light-blue};
+  --character-count-text-color: #{$color-generic-greyblue-lighter-30};
+  --dropdown-placeholder-text-color: #{$color-generic-greyblue-lighter-50};
+  --reload-button-text-color: #{$color-neutral-white};
+
+  // buttons
+  --btn-border-color: #{$color-light-blue};
+  --outlined-btn-color: #{$color-light-blue};
+  --disabled-btn-bgcolor: #{$color-generic-greyblue-lighter-60};
+  --filled-btn-hover-bgcolor: #{$color-light-blue-darker-20};
+  --filled-btn-active-bgcolor: #{$color-light-blue-darker-40};
+  --outlined-btn-hover-bgcolor: #{$color-light-blue-lighter-70};
+  --outlined-btn-active-bgcolor: #{$color-light-blue-lighter-60};
+  --reload-btn-bgcolor: #{$color-grey-blue-lighter-20};
+  --reload-btn-hover-bgcolor: #{$color-generic-greyblue-lighter-10};
+  --reload-btn-active-bgcolor: #{$color-generic-greyblue};
+
+  // borders
+  --primary-border-color: #{$color-generic-greyblue-lighter-70};
+  --menu-item-hover-border-color: #43525c;
+  --help-us-border-color: #{$color-light-pink};
+  --help-us-hover-border-color: #{$color-light-pink-darker-20};
+  --help-us-active-border-color: #{$color-light-pink-darker-40};
+  --control-container-filter-input-border-color: #{$color-generic-greyblue-lighter-60};
+  --banner-border: #{$color-light-yellow};
+  --dropdown-border-color: #{$color-generic-greyblue-lighter-60};
+  --modal-border-color: #{$color-generic-greyblue-lighter-70};
+  --alert-border-color: #{$color-light-red};
+  --modal-border-color: #{$color-generic-greyblue-lighter-70};
+  --input-box-border-color: #{$color-generic-greyblue-lighter-60};
+
+  // links
+  --improve-link-color: #{$color-neutral-white};
+  --improve-link-bg-color: #{$color-light-pink};
+  --improve-link-hover-bg-color: #{$color-light-pink-darker-20};
+  --improve-link-focus-bg-color: #{$color-light-pink-darker-40};
+
+  // badge
+  --success-badge-bg: #{$color-light-green-lighter-70};
+  --success-badge-color: #{$color-light-green-darker-40};
+  --danger-badge-bg: #{$color-light-red-lighter-70};
+  --danger-badge-color: #950101;
+  --info-badge-bg: #{$color-light-blue-lighter-70};
+  --info-badge-color: #{$color-light-blue-darker-20};
+  --warning-badge-bg: #{$color-light-yellow-lighter-70};
+  --warning-badge-color: #{$color-light-yellow-darker-40};
+  --banner-bgcolor: #{$color-light-yellow-lighter-70};
+  --whats-new-maintenance-badge-color: #{$color-light-yellow};
+  --whats-new-release-badge-color: #{$color-light-green};
+
+  //Input box
+  --input-box-error-hover-border-color: #a00;
+  --input-box-error-border-color: #{$color-light-red};
+  --input-box-error-active-shadow-color: #{$color-light-red-lighter-70};
+
+  //grid
+  --table-bg: #ffffff;
+  --table-header-bg: #f8fafc;
+  --table-row-bg: #ffffff;
+  --table-row-hover-bg: #eceeef;
+  --table-border-color: var(--primary-border-color);
+  --table-text-color: var(--primary-text-color);
+
+  --status-active-bg: #e6f4ea;
+  --status-active-text: #137333;
+
+  --status-inactive-bg: #fce8e6;
+  --status-inactive-text: #c5221f;
+
+  --status-unknown-bg: #f1f3f4;
+  --status-unknown-text: #5f6368;
+
+  --table-action-hover-bg: var(--menu-item-hover-background-color);
+}
+
+.theme-dark {
+  // icons
+  --primary-icon-color: #{$color-neutral-white};
+  --secondary-icon-color: #{$color-generic-greyblue-lighter-20};
+  --tertiary-icon-color: #85b9f5;
+  --refresh-icon-color: #{$color-neutral-white};
+  --header-icon-hover-color: #{$color-generic-greyblue-lighter-10};
+  --menu-item-icon-color: #{$color-generic-greyblue-lighter-90};
+  --error-view-icon-color: #cee5ff;
+  --top-buttons-icon-color: #{$color-generic-greyblue-lighter-70};
+  --top-buttons-icon-hoverstate-color: #{$color-generic-greyblue-lighter-15};
+  --top-buttons-icon-activestate-color: #{$color-generic-greyblue-lighter-20};
+  --top-buttons-icon-disabledstate-color: #{$color-generic-greyblue-lighter-30};
+  --header-icon-top-hover-bg-color: #{$color-neutral-white};
+  --header-icon-hover-bg-color: #{$color-generic-greyblue-lighter-15};
+  --details-modal-cross-icon: #{$color-light-pink-lighter-70};
+  --note-warning-icon-fill-color: #{$color-generic-black};
+  --new-feature-cross-icon-fill-color: #{$color-generic-greyblue-lighter-90};
+  --star-icon-fill-color: #{$color-generic-greyblue-lighter-90};
+  --cross-icon-fill-color: #{$color-generic-greyblue-lighter-80};
+  --note-alert-icon-fill-color: #{$color-generic-black};
+  --whats-new-modal-cross-icon-fill-color: #{$color-generic-greyblue-lighter-70};
+
+  // layouts
+  --header-bg-color: #{$color-generic-greyblue-lighter-10};
+  --dashboard-background-color: #{$color-generic-greyblue};
+  --modal-primary-background-color: #203644;
+  --details-modal-background-color: #{$color-generic-greyblue};
+  --primary-background-color: #{$color-generic-greyblue};
+  --secondary-background-color: #{$color-generic-greyblue-lighter-10};
+  --tertiary-background-color: #{$color-neutral-white};
+  --select-bg-color-container: transparent;
+  --note-background-color: #{$color-generic-greyblue-lighter-10};
+  --menu-item-hover-background-color: #{$color-generic-greyblue-lighter-20};
+  --help-us-bg-color: #{$color-generic-greyblue-lighter-15};
+  --help-us-hover-bg-color: #{$color-generic-greyblue-lighter-20};
+  --help-us-active-bg-color: #{$color-generic-greyblue-lighter-15};
+  --logout-view-bg-color: #{$color-generic-greyblue};
+  --request-failed-view-bg-color: #172731;
+  --contact-support-help-you-bg-color: #003f44;
+  --layout-bg-color: #{$color-generic-greyblue};
+
+  // details modal
+  --tag-background-color: #{$color-generic-greyblue-lighter-30};
+  --modal-filename-color: #{$color-neutral-white};
+  --dropdown-option-hover-color: #{$color-generic-greyblue-lighter-15};
+  --dropdown-option-active-color: #{$color-light-blue-lighter-70};
+  --dropdown-option-select-color: #{$color-generic-greyblue-lighter-30};
+  --alert-bg-color: #{$color-light-red-lighter-50};
+
+  //buttons
+  --btn-border-color: #85b9f5;
+  --outlined-btn-color: #85b9f5;
+  --disabled-btn-bgcolor: #{$color-generic-greyblue-lighter-30};
+  --filled-btn-hover-bgcolor: #{$color-light-blue-lighter-50};
+  --filled-btn-active-bgcolor: #{$color-light-blue-lighter-60};
+  --outlined-btn-hover-bgcolor: #{$color-generic-greyblue-lighter-15};
+  --outlined-btn-active-bgcolor: #{$color-generic-greyblue-lighter-20};
+  --reload-btn-bgcolor: #{$color-generic-greyblue-lighter-70};
+  --reload-btn-hover-bgcolor: #fbfbfc;
+  --reload-btn-active-bgcolor: #{$color-generic-greyblue-lighter-90};
+
+  // text
+  --primary-text-color: #{$color-generic-greyblue-lighter-90};
+  --secondary-text-color: #{$color-generic-greyblue-lighter-90};
+  --copyright-text-color: #{$color-generic-greyblue-lighter-70};
+  --note-title-color: #{$color-generic-greyblue-lighter-90};
+  --note-text-color: #{$color-generic-greyblue-lighter-60};
+  --status-after-deadline: #f59b9b;
+  --status-close-deadline: #{$color-light-orange-lighter-50};
+  --header-profile-icon-text-hover-color: #80bbff;
+  --filled-btn-background-color: #{$color-light-blue-lighter-40};
+  --filled-btn-color: #{$color-generic-greyblue-lighter-10};
+  --header-app-name: #{$color-generic-white};
+  --header-profile-icon-text-color: #{$color-generic-greyblue-lighter-10};
+  --header-profile-icon-text-bg-color: #{$color-light-blue-lighter-40};
+  --header-profile-icon-text-hover-bg-color: #{$color-generic-greyblue-lighter-10};
+  --help-us-text-hover-color: #{$color-light-pink-lighter-50};
+  --help-us-text-active-color: #{$color-light-pink-lighter-60};
+  --submission-name-text: #{$color-generic-greyblue-lighter-90};
+  --banner-text: #{$color-generic-greyblue-lighter-10};
+  --disabled-btn-text-color: #{$color-generic-greyblue-lighter-50};
+  --outlined-btn-hover-text-color: #{$color-light-blue-lighter-50};
+  --outlined-btn-active-text-color: #{$color-light-blue-lighter-60};
+  --placeholder-text-color: #{$color-generic-greyblue-lighter-60};
+  --upload-document-link-color: #{$color-light-blue-lighter-40};
+  --character-count-text-color: #{$color-generic-greyblue-lighter-80};
+
+  --dropdown-placeholder-text-color: #{$color-generic-greyblue-lighter-60};
+  --reload-button-text-color: #{$color-generic-greyblue-lighter-10};
+
+  // borders
+  --primary-border-color: #{$color-generic-greyblue-lighter-20};
+  --menu-item-hover-border-color: #{$color-generic-greyblue-lighter-90};
+  --help-us-border-color: #{$color-light-pink-lighter-40};
+  --help-us-hover-border-color: #{$color-light-pink-lighter-50};
+  --help-us-active-border-color: #{$color-light-pink-lighter-60};
+  --control-container-filter-input-border-color: #{$color-generic-greyblue-lighter-60};
+  --banner-border: #{$color-generic-black};
+  --dropdown-border-color: #{$color-generic-greyblue-lighter-30};
+  --modal-border-color: #{$color-grey-blue-lighter-20};
+  --alert-border-color: #{$color-generic-black};
+  --modal-border-color: #{$color-grey-blue-lighter-20};
+  --input-box-border-color: #{$color-generic-greyblue-lighter-40};
+
+  // links
+  --improve-link-color: #{$color-generic-greyblue-lighter-10};
+  --improve-link-bg-color: #f398c3;
+  --improve-link-hover-bg-color: #ffb3d7;
+  --improve-link-focus-bg-color: #ffd9f6;
+
+  //badge
+  --success-badge-bg: #e4f9e4;
+  --success-badge-color: #{$color-light-green-darker-20};
+  --danger-badge-bg: #ffe4e4;
+  --danger-badge-color: #aa0000;
+  --info-badge-bg: #{$color-light-blue-lighter-60};
+  --info-badge-color: #{$color-light-blue-darker-20};
+  --warning-badge-bg: #fff8e1;
+  --warning-badge-color: #745416;
+  --banner-bgcolor: #feeaaa;
+
+  //Input box
+  --input-box-error-hover-border-color: #ffd9d9;
+  --input-box-error-border-color: #{$color-light-red-lighter-50};
+  --input-box-error-active-shadow-color: #{$color-grey-blue-lighter-20};
+
+  --whats-new-maintenance-badge-color: #{$color-light-yellow-lighter-50};
+  --whats-new-release-badge-color: #{$color-light-green-lighter-30};
+
+  //grid
+  --table-bg: #203644;
+  --table-header-bg: #2a4150;
+  --table-row-bg: #203644;
+  --table-row-hover-bg: #2f4858;
+  --table-border-color: var(--primary-border-color);
+  --table-text-color: var(--primary-text-color);
+
+  --status-active-bg: #1f3a2b;
+  --status-active-text: #7dd3a6;
+
+  --status-inactive-bg: #3a1f1f;
+  --status-inactive-text: #f59b9b;
+
+  --status-unknown-bg: #2c2f33;
+  --status-unknown-text: #cbd5e1;
+
+  --table-action-hover-bg: var(--menu-item-hover-background-color);
+}

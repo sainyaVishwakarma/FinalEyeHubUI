@@ -1,0 +1,36 @@
+.layout {
+    margin: 0 auto;
+    min-width: $bp-desktop-small;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .page-container {
+    display: flex;
+    flex: 1 1 auto;
+    overflow: auto;
+    .sidebar-container {
+      position: relative;
+      top: 0;
+      bottom: 0;
+      z-index: $z-sidebar;
+    }
+  }
+  
+  .component-view {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    overflow: auto;
+    background-color: var(--color-neutral-100);
+  }
+  
+  .component-view-with-padding {
+    // padding: 24px;
+  }
+  
+  .loader-within-page-conatiner {
+    top: 56px;
+  }
+  

@@ -1,18 +1,29 @@
-import { fileURLToPath, URL } from 'node:url'
+import { fileURLToPath, URL } from 'node:url';
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
 
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import vueDevTools from 'vite-plugin-vue-devtools'
 
-// https://vite.dev/config/
 export default defineConfig({
+  server: {
+    port: 5173,
+    strictPort: true,
+  },
+  define: {
+    APP_VERSION: JSON.stringify(process.env.npm_package_version),
+  },
   plugins: [
-    vue(),
-    vueDevTools(),
+    vue()
   ],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
-})
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@use "@/assets/styles/main.scss" as *;`,
+      },
+    },
+  },
+});

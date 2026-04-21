@@ -1,0 +1,70 @@
+$color-loader-background: #1d1d1d6b;
+$color-loader-fill: #4e6273;
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include flex-center;
+  background: $color-loader-background;
+  z-index: $z-modal;
+}
+
+.overlay-xs {
+  width: 100%;
+  height: 100%;
+  @include flex-center;
+}
+
+.tp-loader {
+  $root: &;
+  box-sizing: border-box;
+  stroke: $color-loader-fill;
+  fill: $color-loader-fill;
+
+  &_size {
+    &_x-small {
+      width: 60px;
+      height: 10px;
+    }
+
+    &_small {
+      width: 100px;
+      height: 100px;
+    }
+
+    &_medium {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  &__path {
+    stroke-dasharray: 690px;
+    stroke-dashoffset: 690px;
+    fill-opacity: 0;
+    animation: tp-loader-rich-fade-animation 3s infinite linear forwards;
+  }
+}
+
+@keyframes tp-loader-rich-fade-animation {
+  0% {
+    stroke-dashoffset: 690px;
+    fill-opacity: 0;
+  }
+  10% {
+    fill-opacity: 0;
+  }
+  50% {
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+  }
+  90% {
+    fill-opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: -690px;
+    fill-opacity: 0;
+  }
+}

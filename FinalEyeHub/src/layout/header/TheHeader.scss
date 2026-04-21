@@ -1,0 +1,104 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  box-sizing: border-box;
+  background-color: var(--header-bg-color);
+  border-bottom: 1px solid var(--primary-border-color);
+  height: 56px;
+  .left {
+    display: flex;
+    align-items: center;
+
+    .home-link {
+      @include flex-center;
+    }
+
+    .home-link {
+      height: 100%;
+    }
+ 
+    .appName {
+      margin-left: 8px;
+      font-family: 'Gotham', sans-serif;
+      line-height: 40px;
+      color: var(--header-app-name);
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
+
+  .navigation {
+    display: flex;
+    align-items: center;
+    margin: 0;
+
+    .item {
+      margin-left: 16px;
+      list-style-type: none;
+
+      &:first-child {
+        margin-left: 40px;
+      }
+    }
+  }
+}
+
+.theme-toggle {
+  background: transparent;
+  border: 1px solid var(--accent-color);
+
+  padding: $spacing-sm $spacing-md;
+  border-radius: $radius-sm;
+
+  color: var(--note-text-color);
+  cursor: pointer;
+  font-size: $font-sm;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+
+  &:hover {
+    background-color: var(--accent-color);
+    color: var(--menu-item-icon-color);
+  }
+}
+
+@include responsive($bp-desktop-small) {
+  .header {
+    padding: 8px 12px;
+    // display: flex;
+    // flex-direction: column;
+  }
+
+  .header .left {
+    gap: 8px;
+  }
+
+  .header .navigation {
+    .item {
+      margin-left: 8px;
+
+      &:first-child {
+        margin-left: 8px;
+      }
+    }
+  }
+
+  .theme-toggle {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--primary-text-color);
+}
