@@ -2,11 +2,15 @@
 import TheHeader from './header/TheHeader.vue'
 import Sidebar from './sidebar/Sidebar.vue'
 import TPLoader from '@/components/TPLoader.vue'
+import TheFileRibbon from './TheFileRibbon.vue'
 
 </script>
 <template>
 <div class="layout">
     <header><TheHeader /></header>
+    <div class="ribbon-container">
+      <TheFileRibbon />
+    </div>
     <main class="page-container">
       <aside
         class="sidebar-container"
