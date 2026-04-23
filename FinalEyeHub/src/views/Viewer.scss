@@ -1,0 +1,13 @@
+.viewer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0 0 2rem;
+  max-width: 1200px;
+}
+
+.viewer__heading {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
