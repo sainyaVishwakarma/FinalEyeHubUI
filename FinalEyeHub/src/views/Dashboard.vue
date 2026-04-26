@@ -3,10 +3,10 @@
       <!-- Header -->
       <div class="dashboard-header">
         <h1>Final Eye Dashboard</h1>
-        <p>Review summary and issue queue</p>
+        <p>TransCheck issue summary and review queue</p>
       </div>
   
-      <!-- Top Summary Cards -->
+      <!-- Summary Cards -->
       <div class="summary-grid">
         <div class="summary-card">
           <h3>Total Issues</h3>
@@ -14,34 +14,34 @@
         </div>
   
         <div class="summary-card critical">
-          <h3>High Severity</h3>
-          <span>{{ highSeverityCount }}</span>
+          <h3>High Priority</h3>
+          <span>{{ highPriorityCount }}</span>
         </div>
   
         <div class="summary-card pending">
-          <h3>Pending Review</h3>
-          <span>{{ issues.length }}</span>
+          <h3>Medium Priority</h3>
+          <span>{{ mediumPriorityCount }}</span>
         </div>
   
         <div class="summary-card progress">
-          <h3>Completion</h3>
-          <span>{{ completionPercentage }}%</span>
+          <h3>Low Priority</h3>
+          <span>{{ lowPriorityCount }}</span>
         </div>
       </div>
   
-      <!-- Issue Breakdown -->
+      <!-- Tags Breakdown -->
       <div class="breakdown-section">
         <div
           class="breakdown-card"
-          v-for="(count, type) in issueTypeCount"
-          :key="type"
+          v-for="(count, tag) in tagCount"
+          :key="tag"
         >
-          <h4>{{ type }}</h4>
+          <h4>{{ tag }}</h4>
           <span>{{ count }}</span>
         </div>
       </div>
   
-      <!-- Main Issue List -->
+      <!-- Issues -->
       <div class="issue-list-section">
         <div class="section-header">
           <h2>Segments Requiring Review</h2>
@@ -54,62 +54,64 @@
         <div class="issue-list">
           <div
             class="issue-card"
-            v-for="issue in issues"
-            :key="issue.seg"
-            :class="issue.severity.toLowerCase()"
-            @click="openSegment(issue)"
+            v-for="(issue, index) in issues"
+            :key="index"
+            :class="issue.priority.toLowerCase()"
           >
             <div class="issue-top-row">
-              <div>
-                <strong>Segment #{{ issue.seg }}</strong>
-                <span class="block">Block {{ issue.Block }}</span>
-              </div>
+              <strong>Issue #{{ index + 1 }}</strong>
   
               <span
-                class="severity-badge"
-                :class="issue.severity.toLowerCase()"
+                class="priority-badge"
+                :class="issue.priority.toLowerCase()"
               >
-                {{ issue.severity }}
+                {{ issue.priority }}
               </span>
             </div>
   
             <div class="content-grid">
-              <div class="content-box source">
+              <div class="content-box">
                 <label>Source</label>
-                <p>{{ issue.Source }}</p>
+                <p>{{ issue.source }}</p>
               </div>
   
-              <div class="content-box target">
+              <div class="content-box">
                 <label>Target</label>
-                <p>{{ issue.Target }}</p>
+                <p>{{ issue.target }}</p>
               </div>
             </div>
   
             <div class="meta-row">
               <span>
-                <strong>Issue:</strong> {{ issue.issueType }}
-              </span>
-              <span>
-                <strong>Score:</strong> {{ issue.score }}
+                <strong>Message:</strong>
+                {{ issue.message || "No issue message" }}
               </span>
             </div>
   
             <div class="notes-row">
-              <p><strong>Notes:</strong> {{ issue.Notes }}</p>
-              <p><strong>Comment:</strong> {{ issue.Comment }}</p>
+              <p><strong>Notes:</strong> {{ issue.notes }}</p>
+            </div>
+  
+            <div class="tags-row">
+              <span
+                class="tag-pill"
+                v-for="tag in issue.tags"
+                :key="tag"
+              >
+                {{ tag }}
+              </span>
             </div>
           </div>
         </div>
       </div>
-    </div>
   
-    <!-- Modal -->
-    <SendToLinguistModal
-      :visible="showModal"
-      :problemSegments="issues"
-      @close="showModal = false"
-      @send="sendMail"
-    />
+      <SendToLinguistModal
+        :visible="showModal"
+        :problemSegments="issues"
+        @close="showModal = false"
+        @send="sendMail"
+      />
+    </div>
   </template>
   
   <script setup>
@@ -120,69 +122,48 @@
   
   const issues = ref([
     {
-      seg: 42,
-      Block: "1-2-3",
-      Source: "The total amount is 120",
-      Target: "Le montant total est 12",
-      score: "100+",
-      Notes: "Possible number mismatch",
-      Comment: "Please verify numeric consistency",
-      severity: "High",
-      issueType: "Number Difference Check",
-    },
-    {
-      seg: 43,
-      Block: "1-2-4",
-      Source: "Hello World",
-      Target: "Bonjour Monde",
-      score: "95",
-      Notes: "Glossary mismatch",
-      Comment: "Use approved terminology",
-      severity: "Medium",
-      issueType: "Glossary Check",
+      source: "Signature of Investigator if different to above:",
+      target:
+        "Semnătura Investigatorului dacă diferă de numele de mai sus:",
+      message: "",
+      notes:
+        "Mistranslation detected. Suggestion: Semnătura Investigatorului dacă diferă de cea de mai sus",
+      priority: "LOW",
+      isEmptyNote: false,
+      hasMultipleNotes: false,
+      tags: ["Mistranslation"],
     },
   ]);
   
   const totalIssues = computed(() => issues.value.length);
   
-  const highSeverityCount = computed(
-    () =>
-      issues.value.filter(
-        (x) => x.severity.toLowerCase() === "high"
-      ).length
+  const highPriorityCount = computed(
+    () => issues.value.filter((x) => x.priority === "HIGH").length
   );
   
-  const completionPercentage = computed(() => 78);
+  const mediumPriorityCount = computed(
+    () => issues.value.filter((x) => x.priority === "MEDIUM").length
+  );
   
-  const issueTypeCount = computed(() => {
+  const lowPriorityCount = computed(
+    () => issues.value.filter((x) => x.priority === "LOW").length
+  );
+  
+  const tagCount = computed(() => {
     const map = {};
   
     issues.value.forEach((issue) => {
-      map[issue.issueType] = (map[issue.issueType] || 0) + 1;
+      issue.tags.forEach((tag) => {
+        map[tag] = (map[tag] || 0) + 1;
+      });
     });
   
     return map;
   });
   
-  const openSegment = (issue) => {
-    console.log("Open segment", issue.seg);
-  
-    // later route to viewer / txlf
-    // router.push(`/viewer/${issue.seg}`)
-  };
-  
   const sendMail = async (payload) => {
-    try {
-      console.log("Sending payload:", payload);
-  
-      /*
-      await axios.post('/api/send-to-linguist', payload)
-      */
-  
-      showModal.value = false;
-    } catch (error) {
-      console.error("Failed to send mail", error);
-    }
+    console.log(payload);
+    showModal.value = false;
   };
   </script>
   
@@ -190,17 +171,6 @@
   .dashboard-container {
     padding: 24px;
     background: #f8fafc;
-    min-height: 100vh;
-  }
-  
-  .dashboard-header h1 {
-    margin: 0;
-    font-size: 28px;
-  }
-  
-  .dashboard-header p {
-    color: #64748b;
-    margin-bottom: 24px;
   }
   
   .summary-grid {
@@ -210,75 +180,31 @@
     margin-bottom: 24px;
   }
   
-  .summary-card {
+  .summary-card,
+  .breakdown-card,
+  .issue-list-section {
     background: white;
-    border-radius: 16px;
-    padding: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  }
-  
-  .summary-card span {
-    font-size: 28px;
-    font-weight: 700;
+    border-radius: 14px;
+    padding: 18px;
   }
   
   .breakdown-section {
     display: flex;
     gap: 12px;
     margin-bottom: 24px;
-    flex-wrap: wrap;
-  }
-  
-  .breakdown-card {
-    background: white;
-    padding: 14px 18px;
-    border-radius: 12px;
-    min-width: 220px;
-  }
-  
-  .issue-list-section {
-    background: white;
-    border-radius: 18px;
-    padding: 20px;
-  }
-  
-  .section-header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-  
-  .action-btn {
-    padding: 10px 16px;
-    border: none;
-    background: #2563eb;
-    color: white;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 600;
-  }
-  
-  .action-btn:hover {
-    opacity: 0.9;
   }
   
   .issue-list {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 16px;
   }
   
   .issue-card {
     border: 1px solid #e2e8f0;
-    border-left: 6px solid #94a3b8;
-    border-radius: 14px;
+    border-left: 5px solid #94a3b8;
     padding: 18px;
-    cursor: pointer;
-    transition: 0.2s ease;
-  }
-  
-  .issue-card:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    border-radius: 12px;
   }
   
   .issue-card.high {
@@ -289,39 +215,35 @@
     border-left-color: #f59e0b;
   }
   
-  .issue-top-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 16px;
+  .issue-card.low {
+    border-left-color: #16a34a;
   }
   
-  .block {
-    margin-left: 12px;
-    color: #64748b;
-  }
-  
-  .severity-badge {
+  .priority-badge {
     padding: 6px 10px;
     border-radius: 999px;
-    font-size: 12px;
-    font-weight: 600;
   }
   
-  .severity-badge.high {
+  .priority-badge.high {
     background: #fee2e2;
     color: #dc2626;
   }
   
-  .severity-badge.medium {
+  .priority-badge.medium {
     background: #fef3c7;
     color: #d97706;
+  }
+  
+  .priority-badge.low {
+    background: #dcfce7;
+    color: #16a34a;
   }
   
   .content-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 12px;
-    margin-bottom: 14px;
+    margin: 14px 0;
   }
   
   .content-box {
@@ -330,20 +252,21 @@
     border-radius: 10px;
   }
   
-  .content-box label {
-    display: block;
+  .tag-pill {
+    display: inline-block;
+    padding: 4px 8px;
+    margin-right: 8px;
+    margin-top: 8px;
+    background: #e2e8f0;
+    border-radius: 999px;
     font-size: 12px;
-    color: #64748b;
-    margin-bottom: 8px;
   }
   
-  .meta-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 12px;
-  }
-  
-  .notes-row p {
-    margin: 4px 0;
+  .action-btn {
+    padding: 10px 16px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
   }
   </style>
