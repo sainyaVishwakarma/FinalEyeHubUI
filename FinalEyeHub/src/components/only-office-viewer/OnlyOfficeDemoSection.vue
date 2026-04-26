@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import type { ViewerDocument } from '@/services/types/ViewerDocument';
 import TPLoader from '@/components/TPLoader.vue';
 import { LoaderSize } from '@/types/LoaderSize';
 import { ref } from 'vue';
 import OnlyOfficeViewer from './OnlyOfficeViewer.vue';
+import { useOnlyOfficeSelectionStore } from '@/stores/onlyOfficeSelectionStore';
 
 const props = withDefaults(
   defineProps<{
@@ -14,43 +14,16 @@ const props = withDefaults(
   }
 );
 
-function extensionFromFileName(fileName: string): string {
-  return fileName.split('.').pop()?.toLowerCase() ?? '';
+const { state } = useOnlyOfficeSelectionStore();
+const sourceLoading = ref(false);
+const targetLoading = ref(false);
+
+function onSourceViewerLoader(visible: boolean) {
+  sourceLoading.value = visible;
 }
 
-/** Dummy rows — swap for API data (`downloadId` + `name` per file). */
-const dummyCatalog: ViewerDocument[] = [
-  { downloadId: 1, name: 'Executive summary.docx', size: '128 KB' },
-  { downloadId: 2, name: 'Compliance checklist.docx', size: '312 KB' },
-  { downloadId: 3, name: 'Release notes.docx', size: '48 KB' },
-  { downloadId: 4, name: 'Quarterly metrics.docx', size: '96 KB' },
-  { downloadId: 5, name: 'Stakeholder overview.docx', size: '1.2 MB' },
-  { downloadId: 6, name: 'Readme.docx', size: '4 KB' }
-];
-
-const activeDocument = ref<ViewerDocument | null>(null);
-const loadingViewer = ref(false);
-
-function openDocument(doc: ViewerDocument) {
-  activeDocument.value = doc;
-  loadingViewer.value = true;
-}
-
-function clearViewer() {
-  activeDocument.value = null;
-  loadingViewer.value = false;
-}
-
-function onViewerLoader(visible: boolean) {
-  loadingViewer.value = visible;
-}
-
-function isActive(doc: ViewerDocument): boolean {
-  return (
-    activeDocument.value !== null &&
-    activeDocument.value.downloadId === doc.downloadId &&
-    activeDocument.value.name === doc.name
-  );
+function onTargetViewerLoader(visible: boolean) {
+  targetLoading.value = visible;
 }
 </script>
 
@@ -58,52 +31,60 @@ function isActive(doc: ViewerDocument): boolean {
   <section class="oo-demo" aria-labelledby="oo-demo-title">
     <header class="oo-demo__header">
       <h2 id="oo-demo-title" class="oo-demo__title">{{ props.sectionTitle }}</h2>
-      <p class="oo-demo__subtitle">Select a file to preview it in the viewer below.</p>
+      <p class="oo-demo__subtitle">
+        Source and target files selected from the ribbon are displayed side-by-side.
+      </p>
     </header>
 
-    <ul class="oo-demo__grid" role="list">
-      <li
-        v-for="(doc, index) in dummyCatalog"
-        :key="`${doc.downloadId}-${index}`"
-        class="oo-demo__grid-item"
-      >
-        <button
-          type="button"
-          class="oo-demo__card"
-          :class="{ 'oo-demo__card--active': isActive(doc) }"
-          @click="openDocument(doc)"
-        >
-          <span class="oo-demo__card-main">
-            <span class="oo-demo__card-name">{{ doc.name }}</span>
-            <span class="oo-demo__badge" aria-hidden="true">{{
-              extensionFromFileName(doc.name)
-            }}</span>
-          </span>
-          <span class="oo-demo__card-meta">{{ doc.size }}</span>
-        </button>
-      </li>
-    </ul>
+    <div
+      v-if="state.sourceDocument || state.targetDocument"
+      class="oo-demo__viewer-grid"
+      role="list"
+    >
+      <div class="oo-demo__inline-viewer" role="listitem">
+        <header class="oo-demo__inline-head">
+          <span class="oo-demo__inline-title">Source</span>
+          <span class="oo-demo__inline-file">{{ state.sourceDocument?.name ?? 'Not selected' }}</span>
+        </header>
+        <div class="oo-demo__inline-body">
+          <template v-if="state.sourceDocument">
+            <TPLoader v-if="sourceLoading" :size="LoaderSize.medium" />
+            <OnlyOfficeViewer
+              :key="`source::${state.sourceDocument.downloadId}::${state.sourceDocument.name}`"
+              :download-id="state.sourceDocument.downloadId"
+              :document-name="state.sourceDocument.name"
+              :is-view-only="true"
+              @toggle-loader="onSourceViewerLoader"
+            />
+          </template>
+          <p v-else class="oo-demo__empty-hint">No source file selected.</p>
+        </div>
+      </div>
 
-    <div v-if="activeDocument" class="oo-demo__inline-viewer">
-      <header class="oo-demo__inline-head">
-        <span class="oo-demo__inline-title">{{ activeDocument.name }}</span>
-        <button type="button" class="oo-demo__inline-clear" @click="clearViewer">
-          Clear
-        </button>
-      </header>
-      <div class="oo-demo__inline-body">
-        <TPLoader v-if="loadingViewer" :size="LoaderSize.medium" />
-        <OnlyOfficeViewer
-          :key="`${activeDocument.downloadId}::${activeDocument.name}`"
-          :download-id="activeDocument.downloadId"
-          :document-name="activeDocument.name"
-          :is-view-only="true"
-          @toggle-loader="onViewerLoader"
-        />
+      <div class="oo-demo__inline-viewer" role="listitem">
+        <header class="oo-demo__inline-head">
+          <span class="oo-demo__inline-title">Target</span>
+          <span class="oo-demo__inline-file">{{ state.targetDocument?.name ?? 'Not selected' }}</span>
+        </header>
+        <div class="oo-demo__inline-body">
+          <template v-if="state.targetDocument">
+            <TPLoader v-if="targetLoading" :size="LoaderSize.medium" />
+            <OnlyOfficeViewer
+              :key="`target::${state.targetDocument.downloadId}::${state.targetDocument.name}`"
+              :download-id="state.targetDocument.downloadId"
+              :document-name="state.targetDocument.name"
+              :is-view-only="true"
+              @toggle-loader="onTargetViewerLoader"
+            />
+          </template>
+          <p v-else class="oo-demo__empty-hint">No target file selected.</p>
+        </div>
       </div>
     </div>
 
-    <p v-else class="oo-demo__empty-hint">No document selected.</p>
+    <p v-else class="oo-demo__empty-hint">
+      Select source and target files from the ribbon to preview them here.
+    </p>
   </section>
 </template>
 

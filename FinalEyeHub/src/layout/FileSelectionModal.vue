@@ -1,45 +1,177 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
-import axios from 'axios'
+import type { ViewerDocument } from '@/services/types/ViewerDocument';
+import axios from 'axios';
+import { computed, onMounted, ref } from 'vue';
 
-const emit = defineEmits(['close', 'submit-selection'])
+type RawFileOption = string | Record<string, unknown>;
 
-const sourceFiles = ref<string[]>([])
-const targetFiles = ref<string[]>([])
+interface FileOption {
+  key: string;
+  label: string;
+  requestValue: string;
+  document: ViewerDocument | null;
+}
 
-const selectedSource = ref('')
-const selectedTarget = ref('')
+interface SubmitSelectionPayload {
+  currentDocument: string;
+  sourceDocument: ViewerDocument | null;
+  targetDocument: ViewerDocument | null;
+}
 
-const fetchDropdownData = async () => {
+const emit = defineEmits<{
+  close: [];
+  'submit-selection': [payload: SubmitSelectionPayload];
+}>();
+
+const sourceFiles = ref<FileOption[]>([]);
+const targetFiles = ref<FileOption[]>([]);
+
+const selectedSource = ref('');
+const selectedTarget = ref('');
+
+function normalizeViewerDocument(raw: unknown): ViewerDocument | null {
+  if (!raw || typeof raw !== 'object') return null;
+
+  const data = raw as Record<string, unknown>;
+  const downloadId = data.downloadId ?? data.id ?? data.fileId ?? data.documentId;
+  const name =
+    data.name ??
+    data.fileName ??
+    data.documentName ??
+    data.displayName ??
+    data.sourceFile ??
+    data.targetFile;
+
+  if ((typeof downloadId === 'string' || typeof downloadId === 'number') && typeof name === 'string') {
+    return {
+      downloadId,
+      name
+    };
+  }
+
+  return null;
+}
+
+function toFileOption(item: RawFileOption, index: number, prefix: string): FileOption {
+  if (typeof item === 'string') {
+    return {
+      key: `${prefix}-${index}`,
+      label: item,
+      requestValue: item,
+      document: null
+    };
+  }
+
+  const candidate = normalizeViewerDocument(item);
+  const fallbackName =
+    (item.label as string | undefined) ??
+    (item.name as string | undefined) ??
+    (item.fileName as string | undefined) ??
+    `File ${index + 1}`;
+  const valueCandidate =
+    item.value ??
+    item.fileKey ??
+    item.downloadId ??
+    item.id ??
+    item.fileName ??
+    item.name;
+
+  return {
+    key: `${prefix}-${index}-${fallbackName}`,
+    label: fallbackName,
+    requestValue:
+      typeof valueCandidate === 'string' || typeof valueCandidate === 'number'
+        ? String(valueCandidate)
+        : fallbackName,
+    document: candidate
+  };
+}
+
+const selectedSourceOption = computed(() =>
+  sourceFiles.value.find((option) => option.key === selectedSource.value)
+);
+
+const selectedTargetOption = computed(() =>
+  targetFiles.value.find((option) => option.key === selectedTarget.value)
+);
+
+async function fetchDropdownData() {
   try {
-    const response = await axios.get('/api/files/options')
+    const response = await axios.get('/api/files/options');
+    const rawSource = Array.isArray(response.data?.sourceFiles) ? response.data.sourceFiles : [];
+    const rawTarget = Array.isArray(response.data?.targetFiles) ? response.data.targetFiles : [];
 
-    sourceFiles.value = response.data.sourceFiles
-    targetFiles.value = response.data.targetFiles
+    sourceFiles.value = rawSource.map((item: RawFileOption, index: number) =>
+      toFileOption(item, index, 'source')
+    );
+    targetFiles.value = rawTarget.map((item: RawFileOption, index: number) =>
+      toFileOption(item, index, 'target')
+    );
   } catch (error) {
-    console.error('Error fetching dropdown data', error)
+    console.error('Error fetching dropdown data', error);
   }
 }
 
-const submitSelection = async () => {
+function resolveDocumentFromResponse(
+  payload: unknown,
+  kind: 'source' | 'target'
+): ViewerDocument | null {
+  if (!payload || typeof payload !== 'object') return null;
+  const data = payload as Record<string, unknown>;
+
+  const direct = normalizeViewerDocument(data[`${kind}Document`]);
+  if (direct) return direct;
+
+  const fromFile = normalizeViewerDocument(data[`${kind}File`]);
+  if (fromFile) return fromFile;
+
+  if (data.data && typeof data.data === 'object') {
+    const nested = data.data as Record<string, unknown>;
+    const nestedDirect = normalizeViewerDocument(nested[`${kind}Document`]);
+    if (nestedDirect) return nestedDirect;
+    const nestedFile = normalizeViewerDocument(nested[`${kind}File`]);
+    if (nestedFile) return nestedFile;
+  }
+
+  return null;
+}
+
+function buildCurrentDocumentLabel(responseData: unknown): string {
+  if (!responseData || typeof responseData !== 'object') return '';
+  const data = responseData as Record<string, unknown>;
+  if (typeof data.currentDocument === 'string') return data.currentDocument;
+  return '';
+}
+
+async function submitSelection() {
   try {
-    await axios.post('/api/files/fetch', {
-      sourceFile: selectedSource.value,
-      targetFile: selectedTarget.value
-    })
+    const sourceRequestValue = selectedSourceOption.value?.requestValue ?? '';
+    const targetRequestValue = selectedTargetOption.value?.requestValue ?? '';
+
+    const response = await axios.post('/api/files/fetch', {
+      sourceFile: sourceRequestValue,
+      targetFile: targetRequestValue
+    });
 
     emit('submit-selection', {
-      source: selectedSource.value,
-      target: selectedTarget.value
-    })
+      currentDocument: buildCurrentDocumentLabel(response.data),
+      sourceDocument:
+        resolveDocumentFromResponse(response.data, 'source') ??
+        selectedSourceOption.value?.document ??
+        null,
+      targetDocument:
+        resolveDocumentFromResponse(response.data, 'target') ??
+        selectedTargetOption.value?.document ??
+        null
+    });
   } catch (error) {
-    console.error('Error submitting selection', error)
+    console.error('Error submitting selection', error);
   }
 }
 
 onMounted(() => {
-  fetchDropdownData()
-})
+  fetchDropdownData();
+});
 </script>
 
 <template>
@@ -53,10 +185,10 @@ onMounted(() => {
           <option value="">Select source file</option>
           <option
             v-for="file in sourceFiles"
-            :key="file"
-            :value="file"
+            :key="file.key"
+            :value="file.key"
           >
-            {{ file }}
+            {{ file.label }}
           </option>
         </select>
       </div>
@@ -67,10 +199,10 @@ onMounted(() => {
           <option value="">Select target file</option>
           <option
             v-for="file in targetFiles"
-            :key="file"
-            :value="file"
+            :key="file.key"
+            :value="file.key"
           >
-            {{ file }}
+            {{ file.label }}
           </option>
         </select>
       </div>

@@ -1,22 +1,32 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import FileSelectionModal from './FileSelectionModal.vue'
+import { computed, ref } from 'vue';
+import FileSelectionModal from './FileSelectionModal.vue';
+import { useOnlyOfficeSelectionStore } from '@/stores/onlyOfficeSelectionStore';
+import type { ViewerDocument } from '@/services/types/ViewerDocument';
 
-const showModal = ref(false)
-
-const selectedSource = ref('No source selected')
-const selectedTarget = ref('No target selected')
-
-const updateSelection = (payload: { source: string; target: string }) => {
-  selectedSource.value = payload.source
-  selectedTarget.value = payload.target
-  showModal.value = false
+interface SubmitSelectionPayload {
+  currentDocument: string;
+  sourceDocument: ViewerDocument | null;
+  targetDocument: ViewerDocument | null;
 }
+
+const showModal = ref(false);
+const { state, updateSelection } = useOnlyOfficeSelectionStore();
+
+const selectedSource = computed(() => state.sourceDocument?.name ?? 'No source selected');
+const selectedTarget = computed(() => state.targetDocument?.name ?? 'No target selected');
+const currentDocument = computed(() => state.currentDocument);
+
+const onSelectionSubmit = (payload: SubmitSelectionPayload) => {
+  updateSelection(payload);
+  showModal.value = false;
+};
 </script>
 
 <template>
   <div class="file-ribbon">
     <div class="file-info">
+      <span v-if="currentDocument"><strong>Current:</strong> {{ currentDocument }}</span>
       <span><strong>Source:</strong> {{ selectedSource }}</span>
       <span><strong>Target:</strong> {{ selectedTarget }}</span>
     </div>
@@ -28,12 +38,12 @@ const updateSelection = (payload: { source: string; target: string }) => {
     <FileSelectionModal
       v-if="showModal"
       @close="showModal = false"
-      @submit-selection="updateSelection"
+      @submit-selection="onSelectionSubmit"
     />
   </div>
 </template>
 
-<<style scoped>
+<style scoped>
 .file-ribbon {
   height: 32px;
   min-height: 32px;
