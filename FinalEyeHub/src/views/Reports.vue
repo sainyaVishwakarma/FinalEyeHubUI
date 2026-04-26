@@ -17,11 +17,19 @@
         <p class="content-note">
           Showing local sample report from <code>public</code> for testing.
         </p>
+        <p v-if="transcheckLoadError" class="content-error">
+          {{ transcheckLoadError }}
+        </p>
+        <p v-else-if="!transcheckReportHtml" class="content-note">Loading transcheck report...</p>
         <iframe
           class="transcheck-report-frame"
+          :srcdoc="transcheckReportHtml"
           :src="transcheckReportPath"
           title="Transcheck report preview"
         />
+        <a class="content-link" :href="transcheckReportPath" target="_blank" rel="noopener noreferrer">
+          Open report in new tab
+        </a>
       </div>
 
       <div v-else-if="activeTab === 'clientInstructions'" class="content-card">
@@ -48,11 +56,13 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 
 const activeTab = ref('transcheck');
 const transcheckReportPath =
   '/Transcheck_Report_Combined_Sub_6167783_Batch1(1)_en-US-ro-RO_QM2.html';
+const transcheckReportHtml = ref('');
+const transcheckLoadError = ref('');
 
 const tabs = [
   { id: 'transcheck', label: 'Transcheck File' },
@@ -61,6 +71,28 @@ const tabs = [
   { id: 'transiq', label: 'TransIQ Report' },
   { id: 'glossary', label: 'Glossary' }
 ];
+
+function addBaseHref(html: string): string {
+  const baseTag = `<base href="${window.location.origin}/">`;
+  if (html.includes('<head>')) {
+    return html.replace('<head>', `<head>${baseTag}`);
+  }
+  return `${baseTag}${html}`;
+}
+
+onMounted(async () => {
+  try {
+    const response = await fetch(transcheckReportPath, { cache: 'no-store' });
+    if (!response.ok) {
+      throw new Error(`Unable to load report (${response.status})`);
+    }
+    const html = await response.text();
+    transcheckReportHtml.value = addBaseHref(html);
+  } catch (error) {
+    transcheckLoadError.value =
+      error instanceof Error ? error.message : 'Unable to load transcheck report.';
+  }
+});
 </script>
 
 <style scoped>
@@ -117,6 +149,12 @@ const tabs = [
   color: #4b5563;
 }
 
+.content-error {
+  margin: 0;
+  color: #b91c1c;
+  font-weight: 600;
+}
+
 .transcheck-report-frame {
   width: 100%;
   flex: 1;
@@ -124,5 +162,11 @@ const tabs = [
   border: 1px solid #d1d5db;
   border-radius: 6px;
   background: #fff;
+}
+
+.content-link {
+  width: fit-content;
+  color: #1d4ed8;
+  font-weight: 600;
 }
 </style>
