@@ -7,6 +7,13 @@ export default defineConfig({
   server: {
     port: 5173,
     strictPort: true,
+    /** POST /TransCheck/* from the app is same-origin → proxied to TransCheck API (avoids browser CORS on multipart). */
+    proxy: {
+      '/TransCheck': {
+        target: 'http://localhost:5001',
+        changeOrigin: true,
+      },
+    },
   },
   define: {
     APP_VERSION: JSON.stringify(process.env.npm_package_version),
