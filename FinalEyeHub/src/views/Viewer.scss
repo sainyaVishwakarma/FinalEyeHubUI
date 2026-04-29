@@ -2,8 +2,10 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  padding: 0 0 2rem;
-  max-width: 1200px;
+  width: 100%;
+  padding: 1rem 1.5rem 2rem;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .viewer__heading {

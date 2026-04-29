@@ -1,17 +1,25 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue';
+import { computed, ref, watch } from 'vue';
 import FileSelectionModal from './FileSelectionModal.vue';
 import { useOnlyOfficeSelectionStore } from '@/stores/onlyOfficeSelectionStore';
 import type { ViewerDocument } from '@/services/types/ViewerDocument';
+import { useFinalEyeSubmissionStore } from '@/stores/finalEyeSubmissionStore';
 
 interface SubmitSelectionPayload {
   currentDocument: string;
   sourceDocument: ViewerDocument | null;
   targetDocument: ViewerDocument | null;
+  sourceFilePath: string;
+  targetFilePath: string;
+  transcheckReportPaths: string[];
+  segmentReviewReportPaths: string[];
+  transiqReportPaths: string[];
+  glossaryPaths: string[];
 }
 
 const showModal = ref(false);
 const { state, updateSelection } = useOnlyOfficeSelectionStore();
+const { state: submissionState } = useFinalEyeSubmissionStore();
 
 const selectedSource = computed(() => state.sourceDocument?.name ?? 'No source selected');
 const selectedTarget = computed(() => state.targetDocument?.name ?? 'No target selected');
@@ -21,6 +29,22 @@ const onSelectionSubmit = (payload: SubmitSelectionPayload) => {
   updateSelection(payload);
   showModal.value = false;
 };
+
+watch(
+  () => ({
+    loading: submissionState.loading,
+    sourceCount: submissionState.sourceFiles.length,
+    submissionId: submissionState.submissionId,
+    hasSelection: Boolean(state.sourceDocument && state.targetDocument)
+  }),
+  ({ loading, sourceCount, submissionId, hasSelection }) => {
+    // Auto-open selection modal when redirected submission data is ready.
+    if (!loading && submissionId && sourceCount > 0 && !hasSelection) {
+      showModal.value = true;
+    }
+  },
+  { immediate: true }
+);
 </script>
 
 <template>

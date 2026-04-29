@@ -58,24 +58,31 @@
   
           <!-- Problem Segments -->
           <div class="segments-section">
-            <h3>Problem Segments</h3>
+            <h3>Selected Segments ({{ problemSegments.length }})</h3>
+
+            <p v-if="problemSegments.length === 0" class="empty-state">
+              No segments selected.
+            </p>
   
             <div
               class="segment-card"
               v-for="segment in problemSegments"
-              :key="segment.seg"
+              :key="segment.id || segment.seg"
             >
               <div class="segment-header">
-                <strong>Segment #{{ segment.seg }}</strong>
+                <strong>
+                  Segment #{{ segment.seg || "-" }} | Block {{ segment.block || "-" }}
+                </strong>
                 <span class="severity">
-                  {{ segment.severity }}
+                  {{ segment.priority || "LOW" }}
                 </span>
               </div>
   
-              <p><strong>Issue:</strong> {{ segment.issueType }}</p>
-              <p><strong>Source:</strong> {{ segment.Source }}</p>
-              <p><strong>Target:</strong> {{ segment.Target }}</p>
-              <p><strong>Comment:</strong> {{ segment.Comment }}</p>
+              <p><strong>Section:</strong> {{ segment.sectionName || "-" }}</p>
+              <p><strong>Comment:</strong> {{ segment.message || "-" }}</p>
+              <p><strong>Source:</strong> {{ segment.source || "-" }}</p>
+              <p><strong>Target:</strong> {{ segment.target || "-" }}</p>
+              <p><strong>Notes:</strong> {{ segment.notes || "-" }}</p>
             </div>
           </div>
         </div>
@@ -84,7 +91,7 @@
           <button class="secondary-btn" @click="close">
             Cancel
           </button>
-          <button class="primary-btn" @click="sendToLinguist">
+          <button class="primary-btn" :disabled="problemSegments.length === 0" @click="sendToLinguist">
             Send
           </button>
         </div>
@@ -216,6 +223,11 @@
   .segments-section {
     margin-top: 24px;
   }
+
+.empty-state {
+  margin: 8px 0 0;
+  color: #64748b;
+}
   
   .segment-card {
     border: 1px solid #e2e8f0;
@@ -245,6 +257,11 @@
     border-radius: 10px;
     cursor: pointer;
   }
+
+.primary-btn:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
   
   .secondary-btn {
     background: #e2e8f0;

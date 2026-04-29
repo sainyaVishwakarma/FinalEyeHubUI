@@ -28,8 +28,9 @@
 
 .oo-demo__viewer-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(420px, 1fr));
   gap: 1rem;
+  align-items: stretch;
 
   @media (max-width: 1100px) {
     grid-template-columns: 1fr;
@@ -46,6 +47,7 @@
 .oo-demo__inline-viewer {
   display: flex;
   flex-direction: column;
+  height: 100%;
   margin-top: 0.25rem;
   border: 1px solid var(--color-border-subtle, #e4e4e7);
   border-radius: 10px;
@@ -95,8 +97,8 @@
   justify-content: stretch;
   position: relative;
   width: 100%;
-  min-height: min(65vh, 680px);
-  height: min(65vh, 680px);
+  min-height: clamp(380px, 65vh, 680px);
+  height: clamp(380px, 65vh, 680px);
 
   .oo-demo__empty-hint {
     margin: auto;
@@ -112,7 +114,7 @@
 
   .only-office-viewer {
     flex: 1;
-    min-height: min(65vh, 680px);
+    min-height: clamp(380px, 65vh, 680px);
     height: 100%;
   }
 }
@@ -141,7 +143,7 @@
 }
 
 .oo-demo__inline-viewer :deep(.only-office-viewer__frame) {
-  min-height: min(65vh, 680px);
+  min-height: clamp(380px, 65vh, 680px);
 }
 
 .oo-demo__inline-head {
