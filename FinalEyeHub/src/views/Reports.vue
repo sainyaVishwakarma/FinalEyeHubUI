@@ -113,15 +113,19 @@
         </div>
       </div>
 
+      <!--
       <div v-else-if="activeTab === 'transiq'" class="content-card">
         <h3>TransIQ Report</h3>
         <p>Placeholder for excel-style report view.</p>
       </div>
+      -->
 
+      <!--
       <div v-else-if="activeTab === 'glossary'" class="content-card">
         <h3>Glossary</h3>
         <p>Placeholder for custom glossary HTML/CSS UI.</p>
       </div>
+      -->
     </div>
   </div>
 </template>
@@ -169,9 +173,9 @@ const tabs = [
   { id: 'transcheck', label: 'Transcheck File' },
   { id: 'segmentReview', label: 'Segment Review' },
   { id: 'clientInstructions', label: 'Client Instructions' },
-  { id: 'feChecklist', label: 'FE Checklist' },
-  { id: 'transiq', label: 'TransIQ Report' },
-  { id: 'glossary', label: 'Glossary' }
+  { id: 'feChecklist', label: 'FE Checklist' }
+  // { id: 'transiq', label: 'TransIQ Report' },
+  // { id: 'glossary', label: 'Glossary' }
 ];
 
 const clientInstructionsHtml = computed(() => {
