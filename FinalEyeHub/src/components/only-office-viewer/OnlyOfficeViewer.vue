@@ -14,7 +14,7 @@ const emit = defineEmits<{
 
 const props = withDefaults(
   defineProps<{
-    /** Query value for `downloadId` (your `OnlyOffice/downloadfile` API). */
+    /** Query value for `filePath` (or legacy identifier) in `OnlyOffice/downloadfile` API. */
     downloadId: string | number;
     /** File name including extension (title in ONLYOFFICE). */
     documentName: string;
@@ -36,8 +36,9 @@ const docServerUrl = computed(() => {
 const downloadFileBaseUrl = computed(() => {
   const explicit = (import.meta.env.VITE_ONLYOFFICE_DOWNLOAD_URL || '').trim();
   if (explicit) return explicit.replace(/\/$/, '');
-  const host = (import.meta.env.VITE_API_HOST || '').trim().replace(/\/$/, '');
-  if (host) return `${host}/OnlyOffice/downloadfile`;
+  // const host = (import.meta.env.VITE_API_HOST || '').trim().replace(/\/$/, '');
+  // if (host) return `${host}/OnlyOffice/downloadfile`;
+  // console.log('downloadFileBaseUrl', host);
   return '';
 });
 
@@ -66,7 +67,8 @@ const documentKey = computed(() => {
 const documentUrl = computed(() => {
   const base = downloadFileBaseUrl.value;
   const id = encodeURIComponent(String(props.downloadId));
-  return `${base}?downloadId=${id}`;
+  console.log('documentUrl', base, id);
+  return `${base}?filePath=${id}&api-version=1`;
 });
 
 const unsupported = computed(() => documentType.value === undefined);
@@ -144,6 +146,19 @@ const viewerConfig = computed<IConfig>(() => ({
 
 const tokenReady = ref(false);
 
+function logOnlyOfficeRequest(stage: 'init' | 'change') {
+  const filePathRaw = String(props.downloadId);
+  const looksLikePath = filePathRaw.includes('\\') || filePathRaw.includes('/');
+  console.info('[OnlyOfficeViewer] Request debug', {
+    stage,
+    documentName: props.documentName,
+    filePathRaw,
+    looksLikePath,
+    downloadEndpointBase: downloadFileBaseUrl.value,
+    requestUrl: documentUrl.value
+  });
+}
+
 const generateToken = async () => {
   const docType = apiDocumentType.value;
   if (unsupported.value || !docType) {
@@ -199,6 +214,7 @@ const onAppReady = () => {
 
 onBeforeMount(async () => {
   emit('toggle-loader', true);
+  logOnlyOfficeRequest('init');
   await generateToken();
 });
 
@@ -208,6 +224,7 @@ watch(
     if (prev && (nextId !== prev[0] || nextName !== prev[1])) {
       tokenReady.value = false;
       emit('toggle-loader', true);
+      logOnlyOfficeRequest('change');
       await generateToken();
     }
   }

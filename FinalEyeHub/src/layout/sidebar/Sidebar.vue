@@ -8,7 +8,6 @@ import CollapseIcon from '@/assets/icons/CollapseIcon.vue'
 import router from '@/router'
 import OrganizationIcon from '@/assets/icons/OrganizationIcon.vue'
 import RoomsIcon from '@/assets/icons/RoomsIcon.vue'
-import PlusIcon from '@/assets/icons/PlusIcon.vue'
 
 const isCollapsed = ref(false)
 
@@ -33,11 +32,12 @@ const sideBarItems = [
     path: RoutePath.Txlf,
     icon: DocumentsIcon,
   },
-  {
-    label: RouteName.Finalize,
-    path: RoutePath.Finalize,
-    icon: PlusIcon,
-  },
+  // Temporarily hidden until the Finalize workflow is ready.
+  // {
+  //   label: RouteName.Finalize,
+  //   path: RoutePath.Finalize,
+  //   icon: PlusIcon,
+  // },
 ]
 
 const route = useRoute()

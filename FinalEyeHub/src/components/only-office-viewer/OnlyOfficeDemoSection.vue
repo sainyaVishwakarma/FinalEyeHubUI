@@ -8,9 +8,11 @@ import { useOnlyOfficeSelectionStore } from '@/stores/onlyOfficeSelectionStore';
 const props = withDefaults(
   defineProps<{
     sectionTitle: string;
+    refreshToken?: number;
   }>(),
   {
-    sectionTitle: 'Documents'
+    sectionTitle: 'Documents',
+    refreshToken: 0
   }
 );
 
@@ -50,7 +52,7 @@ function onTargetViewerLoader(visible: boolean) {
           <template v-if="state.sourceDocument">
             <TPLoader v-if="sourceLoading" :size="LoaderSize.medium" />
             <OnlyOfficeViewer
-              :key="`source::${state.sourceDocument.downloadId}::${state.sourceDocument.name}`"
+              :key="`source::${props.refreshToken}::${state.sourceDocument.downloadId}::${state.sourceDocument.name}`"
               :download-id="state.sourceDocument.downloadId"
               :document-name="state.sourceDocument.name"
               :is-view-only="true"
@@ -70,7 +72,7 @@ function onTargetViewerLoader(visible: boolean) {
           <template v-if="state.targetDocument">
             <TPLoader v-if="targetLoading" :size="LoaderSize.medium" />
             <OnlyOfficeViewer
-              :key="`target::${state.targetDocument.downloadId}::${state.targetDocument.name}`"
+              :key="`target::${props.refreshToken}::${state.targetDocument.downloadId}::${state.targetDocument.name}`"
               :download-id="state.targetDocument.downloadId"
               :document-name="state.targetDocument.name"
               :is-view-only="true"

@@ -29,7 +29,13 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@use "@/assets/styles/main.scss" as *;`,
+        additionalData: (source: string, filename: string) => {
+          const normalizedFilename = filename.replace(/\\/g, '/');
+          if (normalizedFilename.endsWith('/src/assets/styles/main.scss')) {
+            return source;
+          }
+          return `@use "@/assets/styles/main.scss" as *;\n${source}`;
+        },
       },
     },
   },

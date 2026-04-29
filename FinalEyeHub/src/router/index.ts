@@ -10,7 +10,10 @@ const router = createRouter({
   routes: [
     {
       path: RoutePath.Root,
-      redirect: RoutePath.Dashboard,
+      redirect: (to) => ({
+        path: RoutePath.Dashboard,
+        query: to.query,
+      }),
     },
     {
       path: RoutePath.Dashboard,

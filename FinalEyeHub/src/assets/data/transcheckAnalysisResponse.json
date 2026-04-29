@@ -1,0 +1,610 @@
+{
+    "sections": [
+      {
+        "key": "CHECKEDITEDCONTEXT",
+        "displayName": "Edited Context Check",
+        "detectedHeaders": [
+          "Seg",
+          "Block",
+          "Source",
+          "Target",
+          "Score",
+          "Notes",
+          "Comment"
+        ],
+        "rows": [
+          {
+            "columnValues": {
+              "Seg": "27",
+              "Block": "2-2-1",
+              "Source": "A description of this clinical study will be available on www.clinicaltrials.gov as required by U.S. law.  This website will not include information that can identify your child but will include a summary of the results. You can search this website at any time. In addition, it will also be available on www.clinicaltrialsregister.eu and.",
+              "Target": "O descriere a acestui studiu clinic va fi disponibilă pe www.clinicaltrials.govconformwww.clinicaltrials.gov conform cerințelor legislației SUA. Acest site web nu va include informații care îl pot identifica pe copilul dvs., dar va include un rezumat al rezultatelor. Puteți face căutări pe acest site web în orice moment. În plus, va fi disponibilă și pe www.clinicaltrialsregister.eu.",
+              "Score": "100+%",
+              "Notes": "Typography: The FT is missing a space between 'gov' and 'conform'. Suggestion: O descriere a acestui studiu clinic va fi disponibilă pe www.clinicaltrials.gov conform cerințelor legislației SUA. Acest site web nu va include informații care îl pot identifica pe copilul dvs., dar va include un rezumat al rezultatelor. Puteți face căutări pe acest site web în orice moment. În plus, va fi disponibilă și pe www.clinicaltrialsregister.eu.QM: updated - TransIQ - Thu Jan 22 11:23:00 EST 2026",
+              "Comment": "Exact context match in target was modified."
+            },
+            "source": "A description of this clinical study will be available on www.clinicaltrials.gov as required by U.S. law.  This website will not include information that can identify your child but will include a summary of the results. You can search this website at any time. In addition, it will also be available on www.clinicaltrialsregister.eu and.",
+            "target": "O descriere a acestui studiu clinic va fi disponibilă pe www.clinicaltrials.govconformwww.clinicaltrials.gov conform cerințelor legislației SUA. Acest site web nu va include informații care îl pot identifica pe copilul dvs., dar va include un rezumat al rezultatelor. Puteți face căutări pe acest site web în orice moment. În plus, va fi disponibilă și pe www.clinicaltrialsregister.eu.",
+            "message": "Exact context match in target was modified.",
+            "notes": "Typography: The FT is missing a space between 'gov' and 'conform'. Suggestion: O descriere a acestui studiu clinic va fi disponibilă pe www.clinicaltrials.gov conform cerințelor legislației SUA. Acest site web nu va include informații care îl pot identifica pe copilul dvs., dar va include un rezumat al rezultatelor. Puteți face căutări pe acest site web în orice moment. În plus, va fi disponibilă și pe www.clinicaltrialsregister.eu.QM: updated - TransIQ - Thu Jan 22 11:23:00 EST 2026",
+            "priority": "MEDIUM",
+            "isEmptyNote": false,
+            "hasMultipleNotes": false,
+            "tags": []
+          },
+          {
+            "columnValues": {
+              "Seg": "89",
+              "Block": "4-3-1",
+              "Source": "To check haemoglobin level in your child’s blood, the study clinical staff or a local clinical person will prick the child’s heel and collect 2-3 drops of blood.",
+              "Target": "Pentru a verifica nivelul hemoglobinei din sângele copilului dvs., personalul clinic de studiu sau o un clinician local va înțepa călcâiul copilului și va recolta 2-3 picături de sânge.",
+              "Score": "100+%",
+              "Notes": "Addition: The word 'un' is an unnecessary addition in the FT. Suggestion: Pentru a verifica nivelul hemoglobinei din sângele copilului dvs., personalul clinic de studiu sau un clinician local va înțepa călcâiul copilului și va recolta 2-3 picături de sânge.QM: updated - TransIQ - Thu Jan 22 11:23:07 EST 2026",
+              "Comment": "Exact context match in target was modified."
+            },
+            "source": "To check haemoglobin level in your child’s blood, the study clinical staff or a local clinical person will prick the child’s heel and collect 2-3 drops of blood.",
+            "target": "Pentru a verifica nivelul hemoglobinei din sângele copilului dvs., personalul clinic de studiu sau o un clinician local va înțepa călcâiul copilului și va recolta 2-3 picături de sânge.",
+            "message": "Exact context match in target was modified.",
+            "notes": "Addition: The word 'un' is an unnecessary addition in the FT. Suggestion: Pentru a verifica nivelul hemoglobinei din sângele copilului dvs., personalul clinic de studiu sau un clinician local va înțepa călcâiul copilului și va recolta 2-3 picături de sânge.QM: updated - TransIQ - Thu Jan 22 11:23:07 EST 2026",
+            "priority": "MEDIUM",
+            "isEmptyNote": false,
+            "hasMultipleNotes": false,
+            "tags": []
+          },
+          {
+            "columnValues": {
+              "Seg": "95",
+              "Block": "4-5-1",
+              "Source": "‭{1}‬Home Healthcare (HHC): ‭{2}‬provides the opportunity for medical professionals such as nurses, or phlebotomists to perform study procedures at your home or a preferred location instead of the study site.",
+              "Target": "‭{1}‬Asistență medicală la domiciliu (HHC): ‭{2}‬oferă profesioniștilor din domeniul medical, cum ar fi asistenții medicali sau flebologiiflebotomiști, posibilitatea de a efectua procedurile de studiu la domiciliu sau într-o locație preferată în locul centrului de studiu.",
+              "Score": "100+%",
+              "Notes": "Mistranslation: The term 'flebologii' (phlebologists) is incorrect as it refers to specialists in vein diseases, not phlebotomists who draw blood. Suggestion: <tag>Asistență medicală la domiciliu (HHC): <tag>oferă profesioniștilor din domeniul medical, cum ar fi asistenții medicali sau flebotomiștii, posibilitatea de a efectua procedurile de studiu la domiciliu sau într-o locație preferată în locul centrului de studiu.QM: updated. - TransIQ - Thu Jan 22 11:23:08 EST 2026",
+              "Comment": "Exact context match in target was modified."
+            },
+            "source": "‭{1}‬Home Healthcare (HHC): ‭{2}‬provides the opportunity for medical professionals such as nurses, or phlebotomists to perform study procedures at your home or a preferred location instead of the study site.",
+            "target": "‭{1}‬Asistență medicală la domiciliu (HHC): ‭{2}‬oferă profesioniștilor din domeniul medical, cum ar fi asistenții medicali sau flebologiiflebotomiști, posibilitatea de a efectua procedurile de studiu la domiciliu sau într-o locație preferată în locul centrului de studiu.",
+            "message": "Exact context match in target was modified.",
+            "notes": "Mistranslation: The term 'flebologii' (phlebologists) is incorrect as it refers to specialists in vein diseases, not phlebotomists who draw blood. Suggestion: <tag>Asistență medicală la domiciliu (HHC): <tag>oferă profesioniștilor din domeniul medical, cum ar fi asistenții medicali sau flebotomiștii, posibilitatea de a efectua procedurile de studiu la domiciliu sau într-o locație preferată în locul centrului de studiu.QM: updated. - TransIQ - Thu Jan 22 11:23:08 EST 2026",
+            "priority": "MEDIUM",
+            "isEmptyNote": false,
+            "hasMultipleNotes": false,
+            "tags": []
+          },
+          {
+            "columnValues": {
+              "Seg": "107",
+              "Block": "4-11-1",
+              "Source": "tell the clinical staff about any health problems your child has during the study",
+              "Target": "să informați personalul clinic despre orice alte problemeproblemă de sănătate pe care le are copilul dvs.",
+              "Score": "100+%",
+              "Notes": "Addition: The FT adds 'alte (other)' which is not present in the source. Suggestion: să informați personalul clinic despre orice probleme de sănătate pe care le are copilul dvs.QM: Updated. In addition, 'orice' is always followed by the singular form, thus 'problems' is translated as 'problemă' (sg) in TL. Source meaning is kept. - TransIQ - Thu Jan 22 11:23:08 EST 2026",
+              "Comment": "Exact context match in target was modified."
+            },
+            "source": "tell the clinical staff about any health problems your child has during the study",
+            "target": "să informați personalul clinic despre orice alte problemeproblemă de sănătate pe care le are copilul dvs.",
+            "message": "Exact context match in target was modified.",
+            "notes": "Addition: The FT adds 'alte (other)' which is not present in the source. Suggestion: să informați personalul clinic despre orice probleme de sănătate pe care le are copilul dvs.QM: Updated. In addition, 'orice' is always followed by the singular form, thus 'problems' is translated as 'problemă' (sg) in TL. Source meaning is kept. - TransIQ - Thu Jan 22 11:23:08 EST 2026",
+            "priority": "MEDIUM",
+            "isEmptyNote": false,
+            "hasMultipleNotes": false,
+            "tags": []
+          },
+          {
+            "columnValues": {
+              "Seg": "111",
+              "Block": "4-15-1",
+              "Source": "tell the clinical staff any tests your baby has had at the request of other doctors outside of the study.",
+              "Target": "să informați personalul clinic cu privire la orice altetest testeefectuat efectuatede către copilului dvs. la cererea altor medici din afara studiului.",
+              "Score": "100+%",
+              "Notes": "Addition: The FT adds 'alte (other)' which is not present in the source. Suggestion: să informați personalul clinic cu privire la orice teste efectuate copilului dvs. la cererea altor medici din afara studiului.QM: updated. - TransIQ - Thu Jan 22 11:23:08 EST 2026",
+              "Comment": "Exact context match in target was modified."
+            },
+            "source": "tell the clinical staff any tests your baby has had at the request of other doctors outside of the study.",
+            "target": "să informați personalul clinic cu privire la orice altetest testeefectuat efectuatede către copilului dvs. la cererea altor medici din afara studiului.",
+            "message": "Exact context match in target was modified.",
+            "notes": "Addition: The FT adds 'alte (other)' which is not present in the source. Suggestion: să informați personalul clinic cu privire la orice teste efectuate copilului dvs. la cererea altor medici din afara studiului.QM: updated. - TransIQ - Thu Jan 22 11:23:08 EST 2026",
+            "priority": "MEDIUM",
+            "isEmptyNote": false,
+            "hasMultipleNotes": false,
+            "tags": []
+          },
+          {
+            "columnValues": {
+              "Seg": "249",
+              "Block": "9-11-1",
+              "Source": "You can opt-out of these communications at any time through the methods provided in the messages or through your clinical staff].",
+              "Target": "Vă puteți dezabona de la aceste comunicări în orice moment, prin metodele furnizate în mesaje sau prin intermediul personalului dvs. clinic].clinic.",
+              "Score": "100+%",
+              "Notes": "Typography: The closing bracket ']' is unnecessary in the FT. Suggestion: Vă puteți dezabona de la aceste comunicări în orice moment, prin metodele furnizate în mesaje sau prin intermediul personalului dvs. clinic.QM: no change needed. - TransIQ - Thu Jan 22 11:23:19 EST 2026",
+              "Comment": "Exact context match in target was modified."
+            },
+            "source": "You can opt-out of these communications at any time through the methods provided in the messages or through your clinical staff].",
+            "target": "Vă puteți dezabona de la aceste comunicări în orice moment, prin metodele furnizate în mesaje sau prin intermediul personalului dvs. clinic].clinic.",
+            "message": "Exact context match in target was modified.",
+            "notes": "Typography: The closing bracket ']' is unnecessary in the FT. Suggestion: Vă puteți dezabona de la aceste comunicări în orice moment, prin metodele furnizate în mesaje sau prin intermediul personalului dvs. clinic.QM: no change needed. - TransIQ - Thu Jan 22 11:23:19 EST 2026",
+            "priority": "LOW",
+            "isEmptyNote": false,
+            "hasMultipleNotes": false,
+            "tags": []
+          },
+          {
+            "columnValues": {
+              "Seg": "256",
+              "Block": "9-14-4",
+              "Source": "This information may need to be shared with travel and accommodation partners to book your arrangements.",
+              "Target": "Este posibil ca aceste informații să trebuiască partajate cu partenerii de călătorie și cazare pentru a vă rezerva aranjamentele.rezervări.",
+              "Score": "100+%",
+              "Notes": "Grammar: The verb 'trebuiască' is missing the auxiliary verb 'să fie' to form the correct subjunctive mood in Romanian. Suggestion: Este posibil ca aceste informații să trebuiască să fie partajate cu partenerii de călătorie și cazare pentru a vă rezerva aranjamentele.QM: updated. - TransIQ - Thu Jan 22 11:23:26 EST 2026",
+              "Comment": "Exact context match in target was modified."
+            },
+            "source": "This information may need to be shared with travel and accommodation partners to book your arrangements.",
+            "target": "Este posibil ca aceste informații să trebuiască partajate cu partenerii de călătorie și cazare pentru a vă rezerva aranjamentele.rezervări.",
+            "message": "Exact context match in target was modified.",
+            "notes": "Grammar: The verb 'trebuiască' is missing the auxiliary verb 'să fie' to form the correct subjunctive mood in Romanian. Suggestion: Este posibil ca aceste informații să trebuiască să fie partajate cu partenerii de călătorie și cazare pentru a vă rezerva aranjamentele.QM: updated. - TransIQ - Thu Jan 22 11:23:26 EST 2026",
+            "priority": "MEDIUM",
+            "isEmptyNote": false,
+            "hasMultipleNotes": false,
+            "tags": []
+          },
+          {
+            "columnValues": {
+              "Seg": "258",
+              "Block": "9-15-2",
+              "Source": "The sponsor will provide all investigational study treatments and pay the study doctor and the study site depending on the agreement] for visits, tests and procedures that are part of the study.",
+              "Target": "Sponsorul va furniza toate tratamentele de studiu investigaționale și va remunera medicul de studiu și centrul de studiu, în funcție de acord]acord, pentru vizitevizitele, testetestele și proceduriprocedurile care fac parte din studiu.",
+              "Score": "100+%",
+              "Notes": "Typography: The closing bracket ']' is incorrectly placed in the FT. Suggestion: Sponsorul va furniza toate tratamentele de studiu investigaționale și va remunera medicul de studiu și centrul de studiu, în funcție de acord, pentru vizite, teste și proceduri care fac parte din studiu.QM: updated. - TransIQ - Thu Jan 22 11:23:26 EST 2026",
+              "Comment": "Exact context match in target was modified."
+            },
+            "source": "The sponsor will provide all investigational study treatments and pay the study doctor and the study site depending on the agreement] for visits, tests and procedures that are part of the study.",
+            "target": "Sponsorul va furniza toate tratamentele de studiu investigaționale și va remunera medicul de studiu și centrul de studiu, în funcție de acord]acord, pentru vizitevizitele, testetestele și proceduriprocedurile care fac parte din studiu.",
+            "message": "Exact context match in target was modified.",
+            "notes": "Typography: The closing bracket ']' is incorrectly placed in the FT. Suggestion: Sponsorul va furniza toate tratamentele de studiu investigaționale și va remunera medicul de studiu și centrul de studiu, în funcție de acord, pentru vizite, teste și proceduri care fac parte din studiu.QM: updated. - TransIQ - Thu Jan 22 11:23:26 EST 2026",
+            "priority": "MEDIUM",
+            "isEmptyNote": false,
+            "hasMultipleNotes": false,
+            "tags": []
+          },
+          {
+            "columnValues": {
+              "Seg": "272",
+              "Block": "10-10-1",
+              "Source": "Any compensation payable for any injury caused to your child by taking part in this study will be in line with local guidelines.",
+              "Target": "Orice compensație care vi se acordă pentru orice vătămărivătămare pe care le-aa suferitsuferit-o copilul dvs. în urma participării la studiu va respecta reglementările locale.",
+              "Score": "100+%",
+              "Notes": "Mistranslation: The FT incorrectly uses 'vi se acordă (is granted to you)' instead of 'plătibilă (payable)', which changes the meaning. Suggestion: Orice compensație plătibilă pentru orice vătămări pe care le-a suferit copilul dvs. în urma participării la studiu va respecta reglementările locale.QM: no change needed - TransIQ - Thu Jan 22 11:23:29 EST 2026",
+              "Comment": "Exact context match in target was modified."
+            },
+            "source": "Any compensation payable for any injury caused to your child by taking part in this study will be in line with local guidelines.",
+            "target": "Orice compensație care vi se acordă pentru orice vătămărivătămare pe care le-aa suferitsuferit-o copilul dvs. în urma participării la studiu va respecta reglementările locale.",
+            "message": "Exact context match in target was modified.",
+            "notes": "Mistranslation: The FT incorrectly uses 'vi se acordă (is granted to you)' instead of 'plătibilă (payable)', which changes the meaning. Suggestion: Orice compensație plătibilă pentru orice vătămări pe care le-a suferit copilul dvs. în urma participării la studiu va respecta reglementările locale.QM: no change needed - TransIQ - Thu Jan 22 11:23:29 EST 2026",
+            "priority": "LOW",
+            "isEmptyNote": false,
+            "hasMultipleNotes": false,
+            "tags": []
+          },
+          {
+            "columnValues": {
+              "Seg": "391",
+              "Block": "14-14-3",
+              "Source": "To safeguard your child’s rights, the Sponsor will use the minimum personally-identifiable information possible.",
+              "Target": "Pentru a proteja drepturile copilului dvs., Sponsorul va utiliza informațiile sale indetificabileidentificabile cât mai puțin posibil.",
+              "Score": "100+%",
+              "Notes": "Spelling: The word 'indetificabile' is misspelled in the FT. Suggestion: Pentru a proteja drepturile copilului dvs., Sponsorul va utiliza informațiile sale identificabile cât mai puțin posibil.QM: updated. - TransIQ - Thu Jan 22 11:23:48 EST 2026",
+              "Comment": "Exact context match in target was modified."
+            },
+            "source": "To safeguard your child’s rights, the Sponsor will use the minimum personally-identifiable information possible.",
+            "target": "Pentru a proteja drepturile copilului dvs., Sponsorul va utiliza informațiile sale indetificabileidentificabile cât mai puțin posibil.",
+            "message": "Exact context match in target was modified.",
+            "notes": "Spelling: The word 'indetificabile' is misspelled in the FT. Suggestion: Pentru a proteja drepturile copilului dvs., Sponsorul va utiliza informațiile sale identificabile cât mai puțin posibil.QM: updated. - TransIQ - Thu Jan 22 11:23:48 EST 2026",
+            "priority": "MEDIUM",
+            "isEmptyNote": false,
+            "hasMultipleNotes": false,
+            "tags": []
+          }
+        ]
+      },
+      {
+        "key": "CHECKEDITEDEXACT",
+        "displayName": "Edited Exact Check",
+        "detectedHeaders": [
+          "Seg",
+          "Block",
+          "Source",
+          "Target",
+          "Score",
+          "Notes",
+          "Comment"
+        ],
+        "rows": []
+      },
+      {
+        "key": "CHECKWHITESPACE",
+        "displayName": "Whitespace Check",
+        "detectedHeaders": [
+          "Seg",
+          "Block",
+          "Source",
+          "Target",
+          "Score",
+          "Notes",
+          "Comment"
+        ],
+        "rows": [
+          {
+            "columnValues": {
+              "Seg": "75",
+              "Block": "3-8-5",
+              "Source": "Approximately 20 ml (4.1 teaspoon) will be collected from your baby during the entire study through 2 years of age, with 1.2 mL (0.24 teaspoon) collected at week 1, 2.3 mL (0.47 teaspoon) collected at 4 weeks, 6.1 mL (1.24 teaspoon) collected at 8 weeks, 4.6 mL (0.93teaspoon) collected at 24 weeks of age, 3.6 mL (0.73 teaspoon) collected at 52 weeks of age, and 2.2 mL (0.44 teaspoon) collected at 104 weeks of age.",
+              "Target": "Se vor recolta aproximativ 20 ml de la copilul dvs. pe parcursul întregului studiu, până la vârsta de 2 ani, din care 1,2 ml în săptămâna 1, 2,3 ml la 4 săptămâni, 6,1 ml la 8 săptămâni, 4,6 ml  la vârsta de 24 de săptămâni, 3,6 ml la vârsta de 52 de săptămâni și 2,2 ml la vârsta de 104 săptămâni.",
+              "Score": "100+%",
+              "Notes": "Omission: The FT omits the conversion of measurements from milliliters to teaspoons. Suggestion: Se vor recolta aproximativ 20 ml (4,1 lingurițe) de la copilul dvs. pe parcursul întregului studiu, până la vârsta de 2 ani, din care 1,2 ml (0,24 lingurițe) în săptămâna 1, 2,3 ml (0,47 lingurițe) la 4 săptămâni, 6,1 ml (1,24 lingurițe) la 8 săptămâni, 4,6 ml (0,93 lingurițe) la vârsta de 24 de săptămâni, 3,6 ml (0,73 lingurițe) la vârsta de 52 de săptămâni și 2,2 ml (0,44 lingurițe) la vârsta de 104 săptămâni.QM: No change needed. TL does not use 'teaspoons' as measurement (except in baking). - TransIQ - Thu Jan 22 11:23:06 EST 2026",
+              "Comment": "Target contains a double whitespace that does not exist in source."
+            },
+            "source": "Approximately 20 ml (4.1 teaspoon) will be collected from your baby during the entire study through 2 years of age, with 1.2 mL (0.24 teaspoon) collected at week 1, 2.3 mL (0.47 teaspoon) collected at 4 weeks, 6.1 mL (1.24 teaspoon) collected at 8 weeks, 4.6 mL (0.93teaspoon) collected at 24 weeks of age, 3.6 mL (0.73 teaspoon) collected at 52 weeks of age, and 2.2 mL (0.44 teaspoon) collected at 104 weeks of age.",
+            "target": "Se vor recolta aproximativ 20 ml de la copilul dvs. pe parcursul întregului studiu, până la vârsta de 2 ani, din care 1,2 ml în săptămâna 1, 2,3 ml la 4 săptămâni, 6,1 ml la 8 săptămâni, 4,6 ml  la vârsta de 24 de săptămâni, 3,6 ml la vârsta de 52 de săptămâni și 2,2 ml la vârsta de 104 săptămâni.",
+            "message": "Target contains a double whitespace that does not exist in source.",
+            "notes": "Omission: The FT omits the conversion of measurements from milliliters to teaspoons. Suggestion: Se vor recolta aproximativ 20 ml (4,1 lingurițe) de la copilul dvs. pe parcursul întregului studiu, până la vârsta de 2 ani, din care 1,2 ml (0,24 lingurițe) în săptămâna 1, 2,3 ml (0,47 lingurițe) la 4 săptămâni, 6,1 ml (1,24 lingurițe) la 8 săptămâni, 4,6 ml (0,93 lingurițe) la vârsta de 24 de săptămâni, 3,6 ml (0,73 lingurițe) la vârsta de 52 de săptămâni și 2,2 ml (0,44 lingurițe) la vârsta de 104 săptămâni.QM: No change needed. TL does not use 'teaspoons' as measurement (except in baking). - TransIQ - Thu Jan 22 11:23:06 EST 2026",
+            "priority": "LOW",
+            "isEmptyNote": false,
+            "hasMultipleNotes": false,
+            "tags": []
+          },
+          {
+            "columnValues": {
+              "Seg": "418",
+              "Block": "16-6-1",
+              "Source": "‭{1}‬Patient Name:‭{2}‬ ‭{3}‬________________________",
+              "Target": "‭{1}‬Numele pacientei:‭{2}‬‭{3}‬ ________________________",
+              "Score": "100%",
+              "Notes": "Spelling: The word 'pacientei' is misspelled in the FT. Suggestion: <tag>Numele pacientului:<tag><tag> ________________________QM: no change needed - TransIQ - Thu Jan 22 11:23:48 EST 2026",
+              "Comment": "Target has differing whitespace around tag 3 compared to source segment."
+            },
+            "source": "‭{1}‬Patient Name:‭{2}‬ ‭{3}‬________________________",
+            "target": "‭{1}‬Numele pacientei:‭{2}‬‭{3}‬ ________________________",
+            "message": "Target has differing whitespace around tag 3 compared to source segment.",
+            "notes": "Spelling: The word 'pacientei' is misspelled in the FT. Suggestion: <tag>Numele pacientului:<tag><tag> ________________________QM: no change needed - TransIQ - Thu Jan 22 11:23:48 EST 2026",
+            "priority": "LOW",
+            "isEmptyNote": false,
+            "hasMultipleNotes": false,
+            "tags": []
+          }
+        ]
+      },
+      {
+        "key": "CHECKDIGITMISMATCH",
+        "displayName": "Number Difference Check",
+        "detectedHeaders": [
+          "Seg",
+          "Block",
+          "Source",
+          "Target",
+          "Score",
+          "Notes",
+          "Comment"
+        ],
+        "rows": [
+          {
+            "columnValues": {
+              "Seg": "75",
+              "Block": "3-8-5",
+              "Source": "Approximately 20 ml (4.1 teaspoon) will be collected from your baby during the entire study through 2 years of age, with 1.2 mL (0.24 teaspoon) collected at week 1, 2.3 mL (0.47 teaspoon) collected at 4 weeks, 6.1 mL (1.24 teaspoon) collected at 8 weeks, 4.6 mL (0.93teaspoon) collected at 24 weeks of age, 3.6 mL (0.73 teaspoon) collected at 52 weeks of age, and 2.2 mL (0.44 teaspoon) collected at 104 weeks of age.",
+              "Target": "Se vor recolta aproximativ 20 ml de la copilul dvs. pe parcursul întregului studiu, până la vârsta de 2 ani, din care 1,2 ml în săptămâna 1, 2,3 ml la 4 săptămâni, 6,1 ml la 8 săptămâni, 4,6 ml  la vârsta de 24 de săptămâni, 3,6 ml la vârsta de 52 de săptămâni și 2,2 ml la vârsta de 104 săptămâni.",
+              "Score": "100+%",
+              "Notes": "Omission: The FT omits the conversion of measurements from milliliters to teaspoons. Suggestion: Se vor recolta aproximativ 20 ml (4,1 lingurițe) de la copilul dvs. pe parcursul întregului studiu, până la vârsta de 2 ani, din care 1,2 ml (0,24 lingurițe) în săptămâna 1, 2,3 ml (0,47 lingurițe) la 4 săptămâni, 6,1 ml (1,24 lingurițe) la 8 săptămâni, 4,6 ml (0,93 lingurițe) la vârsta de 24 de săptămâni, 3,6 ml (0,73 lingurițe) la vârsta de 52 de săptămâni și 2,2 ml (0,44 lingurițe) la vârsta de 104 săptămâni.QM: No change needed. TL does not use 'teaspoons' as measurement (except in baking). - TransIQ - Thu Jan 22 11:23:06 EST 2026",
+              "Comment": "\"4.1, 0.24, 0.47, 1.24, 0.93, 0.73, 0.44\" from source was not found in target."
+            },
+            "source": "Approximately 20 ml (4.1 teaspoon) will be collected from your baby during the entire study through 2 years of age, with 1.2 mL (0.24 teaspoon) collected at week 1, 2.3 mL (0.47 teaspoon) collected at 4 weeks, 6.1 mL (1.24 teaspoon) collected at 8 weeks, 4.6 mL (0.93teaspoon) collected at 24 weeks of age, 3.6 mL (0.73 teaspoon) collected at 52 weeks of age, and 2.2 mL (0.44 teaspoon) collected at 104 weeks of age.",
+            "target": "Se vor recolta aproximativ 20 ml de la copilul dvs. pe parcursul întregului studiu, până la vârsta de 2 ani, din care 1,2 ml în săptămâna 1, 2,3 ml la 4 săptămâni, 6,1 ml la 8 săptămâni, 4,6 ml  la vârsta de 24 de săptămâni, 3,6 ml la vârsta de 52 de săptămâni și 2,2 ml la vârsta de 104 săptămâni.",
+            "message": "\"4.1, 0.24, 0.47, 1.24, 0.93, 0.73, 0.44\" from source was not found in target.",
+            "notes": "Omission: The FT omits the conversion of measurements from milliliters to teaspoons. Suggestion: Se vor recolta aproximativ 20 ml (4,1 lingurițe) de la copilul dvs. pe parcursul întregului studiu, până la vârsta de 2 ani, din care 1,2 ml (0,24 lingurițe) în săptămâna 1, 2,3 ml (0,47 lingurițe) la 4 săptămâni, 6,1 ml (1,24 lingurițe) la 8 săptămâni, 4,6 ml (0,93 lingurițe) la vârsta de 24 de săptămâni, 3,6 ml (0,73 lingurițe) la vârsta de 52 de săptămâni și 2,2 ml (0,44 lingurițe) la vârsta de 104 săptămâni.QM: No change needed. TL does not use 'teaspoons' as measurement (except in baking). - TransIQ - Thu Jan 22 11:23:06 EST 2026",
+            "priority": "LOW",
+            "isEmptyNote": false,
+            "hasMultipleNotes": false,
+            "tags": []
+          }
+        ]
+      },
+      {
+        "key": "CHECKNOTES",
+        "displayName": "Notes Check",
+        "detectedHeaders": [
+          "Seg",
+          "Block",
+          "Source",
+          "Target",
+          "Score",
+          "Notes",
+          "Comment"
+        ],
+        "rows": [
+          {
+            "columnValues": {
+              "Seg": "27",
+              "Block": "2-2-1",
+              "Source": "A description of this clinical study will be available on www.clinicaltrials.gov as required by U.S. law.  This website will not include information that can identify your child but will include a summary of the results. You can search this website at any time. In addition, it will also be available on www.clinicaltrialsregister.eu and.",
+              "Target": "O descriere a acestui studiu clinic va fi disponibilă pe www.clinicaltrials.gov conform cerințelor legislației SUA. Acest site web nu va include informații care îl pot identifica pe copilul dvs., dar va include un rezumat al rezultatelor. Puteți face căutări pe acest site web în orice moment. În plus, va fi disponibilă și pe www.clinicaltrialsregister.eu.",
+              "Score": "100+%",
+              "Notes": "Typography: The FT is missing a space between 'gov' and 'conform'. Suggestion: O descriere a acestui studiu clinic va fi disponibilă pe www.clinicaltrials.gov conform cerințelor legislației SUA. Acest site web nu va include informații care îl pot identifica pe copilul dvs., dar va include un rezumat al rezultatelor. Puteți face căutări pe acest site web în orice moment. În plus, va fi disponibilă și pe www.clinicaltrialsregister.eu.QM: updated - TransIQ - Thu Jan 22 11:23:00 EST 2026",
+              "Comment": "Segment has notes."
+            },
+            "source": "A description of this clinical study will be available on www.clinicaltrials.gov as required by U.S. law.  This website will not include information that can identify your child but will include a summary of the results. You can search this website at any time. In addition, it will also be available on www.clinicaltrialsregister.eu and.",
+            "target": "O descriere a acestui studiu clinic va fi disponibilă pe www.clinicaltrials.gov conform cerințelor legislației SUA. Acest site web nu va include informații care îl pot identifica pe copilul dvs., dar va include un rezumat al rezultatelor. Puteți face căutări pe acest site web în orice moment. În plus, va fi disponibilă și pe www.clinicaltrialsregister.eu.",
+            "message": "Segment has notes.",
+            "notes": "Typography: The FT is missing a space between 'gov' and 'conform'. Suggestion: O descriere a acestui studiu clinic va fi disponibilă pe www.clinicaltrials.gov conform cerințelor legislației SUA. Acest site web nu va include informații care îl pot identifica pe copilul dvs., dar va include un rezumat al rezultatelor. Puteți face căutări pe acest site web în orice moment. În plus, va fi disponibilă și pe www.clinicaltrialsregister.eu.QM: updated - TransIQ - Thu Jan 22 11:23:00 EST 2026",
+            "priority": "MEDIUM",
+            "isEmptyNote": false,
+            "hasMultipleNotes": false,
+            "tags": []
+          },
+          {
+            "columnValues": {
+              "Seg": "75",
+              "Block": "3-8-5",
+              "Source": "Approximately 20 ml (4.1 teaspoon) will be collected from your baby during the entire study through 2 years of age, with 1.2 mL (0.24 teaspoon) collected at week 1, 2.3 mL (0.47 teaspoon) collected at 4 weeks, 6.1 mL (1.24 teaspoon) collected at 8 weeks, 4.6 mL (0.93teaspoon) collected at 24 weeks of age, 3.6 mL (0.73 teaspoon) collected at 52 weeks of age, and 2.2 mL (0.44 teaspoon) collected at 104 weeks of age.",
+              "Target": "Se vor recolta aproximativ 20 ml de la copilul dvs. pe parcursul întregului studiu, până la vârsta de 2 ani, din care 1,2 ml în săptămâna 1, 2,3 ml la 4 săptămâni, 6,1 ml la 8 săptămâni, 4,6 ml  la vârsta de 24 de săptămâni, 3,6 ml la vârsta de 52 de săptămâni și 2,2 ml la vârsta de 104 săptămâni.",
+              "Score": "100+%",
+              "Notes": "Omission: The FT omits the conversion of measurements from milliliters to teaspoons. Suggestion: Se vor recolta aproximativ 20 ml (4,1 lingurițe) de la copilul dvs. pe parcursul întregului studiu, până la vârsta de 2 ani, din care 1,2 ml (0,24 lingurițe) în săptămâna 1, 2,3 ml (0,47 lingurițe) la 4 săptămâni, 6,1 ml (1,24 lingurițe) la 8 săptămâni, 4,6 ml (0,93 lingurițe) la vârsta de 24 de săptămâni, 3,6 ml (0,73 lingurițe) la vârsta de 52 de săptămâni și 2,2 ml (0,44 lingurițe) la vârsta de 104 săptămâni.QM: No change needed. TL does not use 'teaspoons' as measurement (except in baking). - TransIQ - Thu Jan 22 11:23:06 EST 2026",
+              "Comment": "Segment has notes."
+            },
+            "source": "Approximately 20 ml (4.1 teaspoon) will be collected from your baby during the entire study through 2 years of age, with 1.2 mL (0.24 teaspoon) collected at week 1, 2.3 mL (0.47 teaspoon) collected at 4 weeks, 6.1 mL (1.24 teaspoon) collected at 8 weeks, 4.6 mL (0.93teaspoon) collected at 24 weeks of age, 3.6 mL (0.73 teaspoon) collected at 52 weeks of age, and 2.2 mL (0.44 teaspoon) collected at 104 weeks of age.",
+            "target": "Se vor recolta aproximativ 20 ml de la copilul dvs. pe parcursul întregului studiu, până la vârsta de 2 ani, din care 1,2 ml în săptămâna 1, 2,3 ml la 4 săptămâni, 6,1 ml la 8 săptămâni, 4,6 ml  la vârsta de 24 de săptămâni, 3,6 ml la vârsta de 52 de săptămâni și 2,2 ml la vârsta de 104 săptămâni.",
+            "message": "Segment has notes.",
+            "notes": "Omission: The FT omits the conversion of measurements from milliliters to teaspoons. Suggestion: Se vor recolta aproximativ 20 ml (4,1 lingurițe) de la copilul dvs. pe parcursul întregului studiu, până la vârsta de 2 ani, din care 1,2 ml (0,24 lingurițe) în săptămâna 1, 2,3 ml (0,47 lingurițe) la 4 săptămâni, 6,1 ml (1,24 lingurițe) la 8 săptămâni, 4,6 ml (0,93 lingurițe) la vârsta de 24 de săptămâni, 3,6 ml (0,73 lingurițe) la vârsta de 52 de săptămâni și 2,2 ml (0,44 lingurițe) la vârsta de 104 săptămâni.QM: No change needed. TL does not use 'teaspoons' as measurement (except in baking). - TransIQ - Thu Jan 22 11:23:06 EST 2026",
+            "priority": "LOW",
+            "isEmptyNote": false,
+            "hasMultipleNotes": false,
+            "tags": []
+          },
+          {
+            "columnValues": {
+              "Seg": "89",
+              "Block": "4-3-1",
+              "Source": "To check haemoglobin level in your child’s blood, the study clinical staff or a local clinical person will prick the child’s heel and collect 2-3 drops of blood.",
+              "Target": "Pentru a verifica nivelul hemoglobinei din sângele copilului dvs., personalul clinic de studiu sau un clinician local va înțepa călcâiul copilului și va recolta 2-3 picături de sânge.",
+              "Score": "100+%",
+              "Notes": "Addition: The word 'un' is an unnecessary addition in the FT. Suggestion: Pentru a verifica nivelul hemoglobinei din sângele copilului dvs., personalul clinic de studiu sau un clinician local va înțepa călcâiul copilului și va recolta 2-3 picături de sânge.QM: updated - TransIQ - Thu Jan 22 11:23:07 EST 2026",
+              "Comment": "Segment has notes."
+            },
+            "source": "To check haemoglobin level in your child’s blood, the study clinical staff or a local clinical person will prick the child’s heel and collect 2-3 drops of blood.",
+            "target": "Pentru a verifica nivelul hemoglobinei din sângele copilului dvs., personalul clinic de studiu sau un clinician local va înțepa călcâiul copilului și va recolta 2-3 picături de sânge.",
+            "message": "Segment has notes.",
+            "notes": "Addition: The word 'un' is an unnecessary addition in the FT. Suggestion: Pentru a verifica nivelul hemoglobinei din sângele copilului dvs., personalul clinic de studiu sau un clinician local va înțepa călcâiul copilului și va recolta 2-3 picături de sânge.QM: updated - TransIQ - Thu Jan 22 11:23:07 EST 2026",
+            "priority": "MEDIUM",
+            "isEmptyNote": false,
+            "hasMultipleNotes": false,
+            "tags": []
+          },
+          {
+            "columnValues": {
+              "Seg": "95",
+              "Block": "4-5-1",
+              "Source": "‭{1}‬Home Healthcare (HHC): ‭{2}‬provides the opportunity for medical professionals such as nurses, or phlebotomists to perform study procedures at your home or a preferred location instead of the study site.",
+              "Target": "‭{1}‬Asistență medicală la domiciliu (HHC): ‭{2}‬oferă profesioniștilor din domeniul medical, cum ar fi asistenții medicali sau flebotomiști, posibilitatea de a efectua procedurile de studiu la domiciliu sau într-o locație preferată în locul centrului de studiu.",
+              "Score": "100+%",
+              "Notes": "Mistranslation: The term 'flebologii' (phlebologists) is incorrect as it refers to specialists in vein diseases, not phlebotomists who draw blood. Suggestion: <tag>Asistență medicală la domiciliu (HHC): <tag>oferă profesioniștilor din domeniul medical, cum ar fi asistenții medicali sau flebotomiștii, posibilitatea de a efectua procedurile de studiu la domiciliu sau într-o locație preferată în locul centrului de studiu.QM: updated. - TransIQ - Thu Jan 22 11:23:08 EST 2026",
+              "Comment": "Segment has notes."
+            },
+            "source": "‭{1}‬Home Healthcare (HHC): ‭{2}‬provides the opportunity for medical professionals such as nurses, or phlebotomists to perform study procedures at your home or a preferred location instead of the study site.",
+            "target": "‭{1}‬Asistență medicală la domiciliu (HHC): ‭{2}‬oferă profesioniștilor din domeniul medical, cum ar fi asistenții medicali sau flebotomiști, posibilitatea de a efectua procedurile de studiu la domiciliu sau într-o locație preferată în locul centrului de studiu.",
+            "message": "Segment has notes.",
+            "notes": "Mistranslation: The term 'flebologii' (phlebologists) is incorrect as it refers to specialists in vein diseases, not phlebotomists who draw blood. Suggestion: <tag>Asistență medicală la domiciliu (HHC): <tag>oferă profesioniștilor din domeniul medical, cum ar fi asistenții medicali sau flebotomiștii, posibilitatea de a efectua procedurile de studiu la domiciliu sau într-o locație preferată în locul centrului de studiu.QM: updated. - TransIQ - Thu Jan 22 11:23:08 EST 2026",
+            "priority": "MEDIUM",
+            "isEmptyNote": false,
+            "hasMultipleNotes": false,
+            "tags": []
+          },
+          {
+            "columnValues": {
+              "Seg": "107",
+              "Block": "4-11-1",
+              "Source": "tell the clinical staff about any health problems your child has during the study",
+              "Target": "să informați personalul clinic despre orice problemă de sănătate pe care le are copilul dvs.",
+              "Score": "100+%",
+              "Notes": "Addition: The FT adds 'alte (other)' which is not present in the source. Suggestion: să informați personalul clinic despre orice probleme de sănătate pe care le are copilul dvs.QM: Updated. In addition, 'orice' is always followed by the singular form, thus 'problems' is translated as 'problemă' (sg) in TL. Source meaning is kept. - TransIQ - Thu Jan 22 11:23:08 EST 2026",
+              "Comment": "Segment has notes."
+            },
+            "source": "tell the clinical staff about any health problems your child has during the study",
+            "target": "să informați personalul clinic despre orice problemă de sănătate pe care le are copilul dvs.",
+            "message": "Segment has notes.",
+            "notes": "Addition: The FT adds 'alte (other)' which is not present in the source. Suggestion: să informați personalul clinic despre orice probleme de sănătate pe care le are copilul dvs.QM: Updated. In addition, 'orice' is always followed by the singular form, thus 'problems' is translated as 'problemă' (sg) in TL. Source meaning is kept. - TransIQ - Thu Jan 22 11:23:08 EST 2026",
+            "priority": "MEDIUM",
+            "isEmptyNote": false,
+            "hasMultipleNotes": false,
+            "tags": []
+          },
+          {
+            "columnValues": {
+              "Seg": "111",
+              "Block": "4-15-1",
+              "Source": "tell the clinical staff any tests your baby has had at the request of other doctors outside of the study.",
+              "Target": "să informați personalul clinic cu privire la orice test efectuat de către copilului dvs. la cererea altor medici din afara studiului.",
+              "Score": "100+%",
+              "Notes": "Addition: The FT adds 'alte (other)' which is not present in the source. Suggestion: să informați personalul clinic cu privire la orice teste efectuate copilului dvs. la cererea altor medici din afara studiului.QM: updated. - TransIQ - Thu Jan 22 11:23:08 EST 2026",
+              "Comment": "Segment has notes."
+            },
+            "source": "tell the clinical staff any tests your baby has had at the request of other doctors outside of the study.",
+            "target": "să informați personalul clinic cu privire la orice test efectuat de către copilului dvs. la cererea altor medici din afara studiului.",
+            "message": "Segment has notes.",
+            "notes": "Addition: The FT adds 'alte (other)' which is not present in the source. Suggestion: să informați personalul clinic cu privire la orice teste efectuate copilului dvs. la cererea altor medici din afara studiului.QM: updated. - TransIQ - Thu Jan 22 11:23:08 EST 2026",
+            "priority": "MEDIUM",
+            "isEmptyNote": false,
+            "hasMultipleNotes": false,
+            "tags": []
+          },
+          {
+            "columnValues": {
+              "Seg": "113",
+              "Block": "5-1-1",
+              "Source": "not use any other experimental treatments nor enrol in the same study in a different site.",
+              "Target": "să nu utilizați niciun alt tratament investigațional și să nu înrolați copilul în același studiu la un centru diferit.",
+              "Score": "100+%",
+              "Notes": "Mistranslation: The FT incorrectly specifies 'copilul' (the child) instead of 'you' as in the source. Suggestion: să nu utilizați niciun alt tratament investigațional și să nu vă înrolați în același studiu la un centru diferit.QM: no change needed. - TransIQ - Thu Jan 22 11:23:10 EST 2026 | I think the source is ambiguous here regarding the verb „enrol” because it could refer either to the mother or to the baby.QM: per previous segments, this refers to the child, not the mother. - rbodea2 - Fri Jan 23 07:49:12 EST 2026",
+              "Comment": "Segment has notes."
+            },
+            "source": "not use any other experimental treatments nor enrol in the same study in a different site.",
+            "target": "să nu utilizați niciun alt tratament investigațional și să nu înrolați copilul în același studiu la un centru diferit.",
+            "message": "Segment has notes.",
+            "notes": "Mistranslation: The FT incorrectly specifies 'copilul' (the child) instead of 'you' as in the source. Suggestion: să nu utilizați niciun alt tratament investigațional și să nu vă înrolați în același studiu la un centru diferit.QM: no change needed. - TransIQ - Thu Jan 22 11:23:10 EST 2026 | I think the source is ambiguous here regarding the verb „enrol” because it could refer either to the mother or to the baby.QM: per previous segments, this refers to the child, not the mother. - rbodea2 - Fri Jan 23 07:49:12 EST 2026",
+            "priority": "LOW",
+            "isEmptyNote": false,
+            "hasMultipleNotes": false,
+            "tags": []
+          },
+          {
+            "columnValues": {
+              "Seg": "249",
+              "Block": "9-11-1",
+              "Source": "You can opt-out of these communications at any time through the methods provided in the messages or through your clinical staff].",
+              "Target": "Vă puteți dezabona de la aceste comunicări în orice moment, prin metodele furnizate în mesaje sau prin intermediul personalului dvs. clinic.",
+              "Score": "100+%",
+              "Notes": "Typography: The closing bracket ']' is unnecessary in the FT. Suggestion: Vă puteți dezabona de la aceste comunicări în orice moment, prin metodele furnizate în mesaje sau prin intermediul personalului dvs. clinic.QM: no change needed. - TransIQ - Thu Jan 22 11:23:19 EST 2026",
+              "Comment": "Segment has notes."
+            },
+            "source": "You can opt-out of these communications at any time through the methods provided in the messages or through your clinical staff].",
+            "target": "Vă puteți dezabona de la aceste comunicări în orice moment, prin metodele furnizate în mesaje sau prin intermediul personalului dvs. clinic.",
+            "message": "Segment has notes.",
+            "notes": "Typography: The closing bracket ']' is unnecessary in the FT. Suggestion: Vă puteți dezabona de la aceste comunicări în orice moment, prin metodele furnizate în mesaje sau prin intermediul personalului dvs. clinic.QM: no change needed. - TransIQ - Thu Jan 22 11:23:19 EST 2026",
+            "priority": "LOW",
+            "isEmptyNote": false,
+            "hasMultipleNotes": false,
+            "tags": []
+          },
+          {
+            "columnValues": {
+              "Seg": "256",
+              "Block": "9-14-4",
+              "Source": "This information may need to be shared with travel and accommodation partners to book your arrangements.",
+              "Target": "Este posibil ca aceste informații să trebuiască partajate cu partenerii de călătorie și cazare pentru rezervări.",
+              "Score": "100+%",
+              "Notes": "Grammar: The verb 'trebuiască' is missing the auxiliary verb 'să fie' to form the correct subjunctive mood in Romanian. Suggestion: Este posibil ca aceste informații să trebuiască să fie partajate cu partenerii de călătorie și cazare pentru a vă rezerva aranjamentele.QM: updated. - TransIQ - Thu Jan 22 11:23:26 EST 2026",
+              "Comment": "Segment has notes."
+            },
+            "source": "This information may need to be shared with travel and accommodation partners to book your arrangements.",
+            "target": "Este posibil ca aceste informații să trebuiască partajate cu partenerii de călătorie și cazare pentru rezervări.",
+            "message": "Segment has notes.",
+            "notes": "Grammar: The verb 'trebuiască' is missing the auxiliary verb 'să fie' to form the correct subjunctive mood in Romanian. Suggestion: Este posibil ca aceste informații să trebuiască să fie partajate cu partenerii de călătorie și cazare pentru a vă rezerva aranjamentele.QM: updated. - TransIQ - Thu Jan 22 11:23:26 EST 2026",
+            "priority": "MEDIUM",
+            "isEmptyNote": false,
+            "hasMultipleNotes": false,
+            "tags": []
+          },
+          {
+            "columnValues": {
+              "Seg": "258",
+              "Block": "9-15-2",
+              "Source": "The sponsor will provide all investigational study treatments and pay the study doctor and the study site depending on the agreement] for visits, tests and procedures that are part of the study.",
+              "Target": "Sponsorul va furniza toate tratamentele de studiu investigaționale și va remunera medicul de studiu și centrul de studiu, în funcție de acord, pentru vizitele, testele și procedurile care fac parte din studiu.",
+              "Score": "100+%",
+              "Notes": "Typography: The closing bracket ']' is incorrectly placed in the FT. Suggestion: Sponsorul va furniza toate tratamentele de studiu investigaționale și va remunera medicul de studiu și centrul de studiu, în funcție de acord, pentru vizite, teste și proceduri care fac parte din studiu.QM: updated. - TransIQ - Thu Jan 22 11:23:26 EST 2026",
+              "Comment": "Segment has notes."
+            },
+            "source": "The sponsor will provide all investigational study treatments and pay the study doctor and the study site depending on the agreement] for visits, tests and procedures that are part of the study.",
+            "target": "Sponsorul va furniza toate tratamentele de studiu investigaționale și va remunera medicul de studiu și centrul de studiu, în funcție de acord, pentru vizitele, testele și procedurile care fac parte din studiu.",
+            "message": "Segment has notes.",
+            "notes": "Typography: The closing bracket ']' is incorrectly placed in the FT. Suggestion: Sponsorul va furniza toate tratamentele de studiu investigaționale și va remunera medicul de studiu și centrul de studiu, în funcție de acord, pentru vizite, teste și proceduri care fac parte din studiu.QM: updated. - TransIQ - Thu Jan 22 11:23:26 EST 2026",
+            "priority": "MEDIUM",
+            "isEmptyNote": false,
+            "hasMultipleNotes": false,
+            "tags": []
+          },
+          {
+            "columnValues": {
+              "Seg": "269",
+              "Block": "10-7-1",
+              "Source": "It is in their best medical interest to stop",
+              "Target": "Este în interesul său medical să înceteze participarea",
+              "Score": "100+%",
+              "Notes": "Addition: The FT adds 'participarea (participation)' which is not present in the source. Suggestion: Este în interesul său medical să încetezeQM: no change needed. - TransIQ - Thu Jan 22 11:23:29 EST 2026",
+              "Comment": "Segment has notes."
+            },
+            "source": "It is in their best medical interest to stop",
+            "target": "Este în interesul său medical să înceteze participarea",
+            "message": "Segment has notes.",
+            "notes": "Addition: The FT adds 'participarea (participation)' which is not present in the source. Suggestion: Este în interesul său medical să încetezeQM: no change needed. - TransIQ - Thu Jan 22 11:23:29 EST 2026",
+            "priority": "LOW",
+            "isEmptyNote": false,
+            "hasMultipleNotes": false,
+            "tags": []
+          },
+          {
+            "columnValues": {
+              "Seg": "272",
+              "Block": "10-10-1",
+              "Source": "Any compensation payable for any injury caused to your child by taking part in this study will be in line with local guidelines.",
+              "Target": "Orice compensație care vi se acordă pentru orice vătămare pe care a suferit-o copilul dvs. în urma participării la studiu va respecta reglementările locale.",
+              "Score": "100+%",
+              "Notes": "Mistranslation: The FT incorrectly uses 'vi se acordă (is granted to you)' instead of 'plătibilă (payable)', which changes the meaning. Suggestion: Orice compensație plătibilă pentru orice vătămări pe care le-a suferit copilul dvs. în urma participării la studiu va respecta reglementările locale.QM: no change needed - TransIQ - Thu Jan 22 11:23:29 EST 2026",
+              "Comment": "Segment has notes."
+            },
+            "source": "Any compensation payable for any injury caused to your child by taking part in this study will be in line with local guidelines.",
+            "target": "Orice compensație care vi se acordă pentru orice vătămare pe care a suferit-o copilul dvs. în urma participării la studiu va respecta reglementările locale.",
+            "message": "Segment has notes.",
+            "notes": "Mistranslation: The FT incorrectly uses 'vi se acordă (is granted to you)' instead of 'plătibilă (payable)', which changes the meaning. Suggestion: Orice compensație plătibilă pentru orice vătămări pe care le-a suferit copilul dvs. în urma participării la studiu va respecta reglementările locale.QM: no change needed - TransIQ - Thu Jan 22 11:23:29 EST 2026",
+            "priority": "LOW",
+            "isEmptyNote": false,
+            "hasMultipleNotes": false,
+            "tags": []
+          },
+          {
+            "columnValues": {
+              "Seg": "391",
+              "Block": "14-14-3",
+              "Source": "To safeguard your child’s rights, the Sponsor will use the minimum personally-identifiable information possible.",
+              "Target": "Pentru a proteja drepturile copilului dvs., Sponsorul va utiliza informațiile sale identificabile cât mai puțin posibil.",
+              "Score": "100+%",
+              "Notes": "Spelling: The word 'indetificabile' is misspelled in the FT. Suggestion: Pentru a proteja drepturile copilului dvs., Sponsorul va utiliza informațiile sale identificabile cât mai puțin posibil.QM: updated. - TransIQ - Thu Jan 22 11:23:48 EST 2026",
+              "Comment": "Segment has notes."
+            },
+            "source": "To safeguard your child’s rights, the Sponsor will use the minimum personally-identifiable information possible.",
+            "target": "Pentru a proteja drepturile copilului dvs., Sponsorul va utiliza informațiile sale identificabile cât mai puțin posibil.",
+            "message": "Segment has notes.",
+            "notes": "Spelling: The word 'indetificabile' is misspelled in the FT. Suggestion: Pentru a proteja drepturile copilului dvs., Sponsorul va utiliza informațiile sale identificabile cât mai puțin posibil.QM: updated. - TransIQ - Thu Jan 22 11:23:48 EST 2026",
+            "priority": "MEDIUM",
+            "isEmptyNote": false,
+            "hasMultipleNotes": false,
+            "tags": []
+          },
+          {
+            "columnValues": {
+              "Seg": "418",
+              "Block": "16-6-1",
+              "Source": "‭{1}‬Patient Name:‭{2}‬ ‭{3}‬________________________",
+              "Target": "‭{1}‬Numele pacientei:‭{2}‬‭{3}‬ ________________________",
+              "Score": "100%",
+              "Notes": "Spelling: The word 'pacientei' is misspelled in the FT. Suggestion: <tag>Numele pacientului:<tag><tag> ________________________QM: no change needed - TransIQ - Thu Jan 22 11:23:48 EST 2026",
+              "Comment": "Segment has notes."
+            },
+            "source": "‭{1}‬Patient Name:‭{2}‬ ‭{3}‬________________________",
+            "target": "‭{1}‬Numele pacientei:‭{2}‬‭{3}‬ ________________________",
+            "message": "Segment has notes.",
+            "notes": "Spelling: The word 'pacientei' is misspelled in the FT. Suggestion: <tag>Numele pacientului:<tag><tag> ________________________QM: no change needed - TransIQ - Thu Jan 22 11:23:48 EST 2026",
+            "priority": "LOW",
+            "isEmptyNote": false,
+            "hasMultipleNotes": false,
+            "tags": []
+          },
+          {
+            "columnValues": {
+              "Seg": "471",
+              "Block": "19-7-1",
+              "Source": "Signature of Investigator if different to above:",
+              "Target": "Semnătura Investigatorului dacă diferă de numele de mai sus:",
+              "Score": "100+%",
+              "Notes": "Mistranslation: The FT incorrectly translates 'above' as 'numele de mai sus' (the name above) instead of 'de mai sus' (above). Suggestion: Semnătura Investigatorului dacă diferă de cea de mai sus:QM: no change needed. - TransIQ - Thu Jan 22 11:23:57 EST 2026",
+              "Comment": "Segment has notes."
+            },
+            "source": "Signature of Investigator if different to above:",
+            "target": "Semnătura Investigatorului dacă diferă de numele de mai sus:",
+            "message": "Segment has notes.",
+            "notes": "Mistranslation: The FT incorrectly translates 'above' as 'numele de mai sus' (the name above) instead of 'de mai sus' (above). Suggestion: Semnătura Investigatorului dacă diferă de cea de mai sus:QM: no change needed. - TransIQ - Thu Jan 22 11:23:57 EST 2026",
+            "priority": "LOW",
+            "isEmptyNote": false,
+            "hasMultipleNotes": false,
+            "tags": []
+          }
+        ]
+      }
+    ]
+  }

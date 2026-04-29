@@ -1,0 +1,244 @@
+{
+  "submissionDetails": {
+    "name": "Test_MK_PA-22222_FEHUB",
+    "projectName": "FE_Hub_HCK2026",
+    "instructions": "<font face=\"helvetica\">Client Instructions:</font><div><ul style=\"box-sizing: border-box; margin: 0px 0px 20px 7px; padding: 0px; border: 0px rgb(225, 225, 225); font-variant-numeric: inherit; font-variant-east-asian: inherit; font-variant-alternates: inherit; font-variant-position: inherit; font-variant-emoji: inherit; font-stretch: inherit; font-size: 15px; line-height: inherit; font-family: &quot;open sans&quot;, Helvetica, Arial, sans-serif; font-optical-sizing: inherit; font-size-adjust: inherit; font-kerning: inherit; font-feature-settings: inherit; font-variation-settings: inherit; font-language-override: inherit; vertical-align: baseline; list-style: outside disc; color: rgb(102, 102, 102);\"><li style=\"box-sizing: border-box; margin: 0px 0px 0px 1em; padding: 3px 0px; border: 0px rgb(225, 225, 225); font: inherit; vertical-align: baseline;\"><strong style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px rgb(225, 225, 225); font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; font-optical-sizing: inherit; font-size-adjust: inherit; font-kerning: inherit; font-feature-settings: inherit; font-variation-settings: inherit; font-language-override: inherit; vertical-align: baseline; color: rgb(195, 81, 47);\">Do Not Translate:&nbsp;</strong>Clients sometimes don’t want certain words translated. Translators receive directions like this at the beginning of a project. Professional translators routinely make judgments about whether it’s appropriate to translate certain words but clients can also give direction. A person’s name, other capitalized proper nouns, and brands for example are usually not translated.</li><li style=\"box-sizing: border-box; margin: 0px 0px 0px 1em; padding: 3px 0px; border: 0px rgb(225, 225, 225); font: inherit; vertical-align: baseline;\"><strong style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px rgb(225, 225, 225); font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; font-optical-sizing: inherit; font-size-adjust: inherit; font-kerning: inherit; font-feature-settings: inherit; font-variation-settings: inherit; font-language-override: inherit; vertical-align: baseline; color: rgb(195, 81, 47);\">Translation Style:</strong>&nbsp;The style and tone a translation should take is often implied by the nature of the text. Should the tone and style be formal, conversational, something else? The style and tone of a translation can be implied by the nature of the text (legal, education, marketing, et. al.) but clients can make specific instructions concerning the style a translation should take.</li></ul></div>",
+    "sourceLanguage": "en-US",
+    "targetLanguages": [
+      "de-DE",
+      "fr-FR",
+      "es-ES"
+    ],
+    "fileCount": 4,
+    "batchInfos": [
+      {
+        "name": "Batch1",
+        "workflowName": "HUB_Generic_MachineTrans-FullPE-autoTransIQ1-Proof-Proof2-FE"
+      }
+    ]
+  },
+  "folderDetails": {
+    "name": "9f448580-9494-4460-ab1e-8a5d9a2cd50a",
+    "type": "txlf",
+    "folders": [
+      {
+        "name": "Sub_107643_de-DE",
+        "type": "txlf",
+        "folders": [
+          {
+            "name": "Batch1_de-DE_FE",
+            "type": "txlf",
+            "folders": [],
+            "files": [
+              {
+                "name": "adidas-MSWORD_TXLF-de-DE#FE_BPPJA#.doc.txlf",
+                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_de-DE\\Batch1_de-DE_FE\\adidas-MSWORD_TXLF-de-DE#FE_BPPJA#.doc.txlf",
+                "contentType": "application/octet-stream"
+              },
+              {
+                "name": "ALXN1720-MG-301 -   Subject Participation Card-MSWORD_TXLF-de-DE#FE_BPPJD#.docx.txlf",
+                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_de-DE\\Batch1_de-DE_FE\\ALXN1720-MG-301 -   Subject Participation Card-MSWORD_TXLF-de-DE#FE_BPPJD#.docx.txlf",
+                "contentType": "application/octet-stream"
+              },
+              {
+                "name": "Trin-and-Tob-MSWORD_TXLF-de-DE#FE_BPPJG#.docx.txlf",
+                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_de-DE\\Batch1_de-DE_FE\\Trin-and-Tob-MSWORD_TXLF-de-DE#FE_BPPJG#.docx.txlf",
+                "contentType": "application/octet-stream"
+              },
+              {
+                "name": "While there are no hard and fast rules about punctuation_New-MSWORD_TXLF-de-DE#FE_BPPJJ#.docx.txlf",
+                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_de-DE\\Batch1_de-DE_FE\\While there are no hard and fast rules about punctuation_New-MSWORD_TXLF-de-DE#FE_BPPJJ#.docx.txlf",
+                "contentType": "application/octet-stream"
+              }
+            ]
+          },
+          {
+            "name": "Batch1_de-DE_Preview",
+            "type": "Preview",
+            "folders": [],
+            "files": [
+              {
+                "name": "PRELIM__adidas_DE-DE.doc",
+                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_de-DE\\Batch1_de-DE_Preview\\PRELIM__adidas_DE-DE.doc",
+                "contentType": "application/msword"
+              },
+              {
+                "name": "PRELIM__ALXN1720-MG-301 -   Subject Participation Card_DE-DE.docx",
+                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_de-DE\\Batch1_de-DE_Preview\\PRELIM__ALXN1720-MG-301 -   Subject Participation Card_DE-DE.docx",
+                "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+              },
+              {
+                "name": "PRELIM__Trin-and-Tob_DE-DE.docx",
+                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_de-DE\\Batch1_de-DE_Preview\\PRELIM__Trin-and-Tob_DE-DE.docx",
+                "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+              },
+              {
+                "name": "PRELIM__While there are no hard and fast rules about punctuation_New_DE-DE.docx",
+                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_de-DE\\Batch1_de-DE_Preview\\PRELIM__While there are no hard and fast rules about punctuation_New_DE-DE.docx",
+                "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+              }
+            ]
+          },
+          {
+            "name": "Batch1_de-DE_SegmentReview",
+            "type": "SegmentReview",
+            "folders": [],
+            "files": [
+              {
+                "name": "SegmentReview_Report_Sub_107643_Batch1_en-US-de-DE_segment review Proof2_1.html",
+                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_de-DE\\Batch1_de-DE_SegmentReview\\SegmentReview_Report_Sub_107643_Batch1_en-US-de-DE_segment review Proof2_1.html",
+                "contentType": "text/html"
+              },
+              {
+                "name": "SegmentReview_Report_Sub_107643_Batch1_en-US-de-DE_segment review Proof_1.html",
+                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_de-DE\\Batch1_de-DE_SegmentReview\\SegmentReview_Report_Sub_107643_Batch1_en-US-de-DE_segment review Proof_1.html",
+                "contentType": "text/html"
+              }
+            ]
+          },
+          {
+            "name": "Batch1_de-DE_Transcheck",
+            "type": "TransCheck",
+            "folders": [],
+            "files": [
+              {
+                "name": "Transcheck_Report_Sub_107643_Batch1_en-US-de-DE_Proof.html",
+                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_de-DE\\Batch1_de-DE_Transcheck\\Transcheck_Report_Sub_107643_Batch1_en-US-de-DE_Proof.html",
+                "contentType": "text/html"
+              },
+              {
+                "name": "Transcheck_Report_Sub_107643_Batch1_en-US-de-DE_Proof2.html",
+                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_de-DE\\Batch1_de-DE_Transcheck\\Transcheck_Report_Sub_107643_Batch1_en-US-de-DE_Proof2.html",
+                "contentType": "text/html"
+              }
+            ]
+          }
+        ],
+        "files": []
+      },
+      {
+        "name": "Sub_107643_fr-FR",
+        "type": "txlf",
+        "folders": [
+          {
+            "name": "Batch1_fr-FR_FE",
+            "type": "txlf",
+            "folders": [],
+            "files": [
+              {
+                "name": "adidas-MSWORD_TXLF-fr-FR#FE_BPPJC#.doc.txlf",
+                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_fr-FR\\Batch1_fr-FR_FE\\adidas-MSWORD_TXLF-fr-FR#FE_BPPJC#.doc.txlf",
+                "contentType": "application/octet-stream"
+              },
+              {
+                "name": "ALXN1720-MG-301 -   Subject Participation Card-MSWORD_TXLF-fr-FR#FE_BPPJF#.docx.txlf",
+                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_fr-FR\\Batch1_fr-FR_FE\\ALXN1720-MG-301 -   Subject Participation Card-MSWORD_TXLF-fr-FR#FE_BPPJF#.docx.txlf",
+                "contentType": "application/octet-stream"
+              },
+              {
+                "name": "Trin-and-Tob-MSWORD_TXLF-fr-FR#FE_BPPJI#.docx.txlf",
+                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_fr-FR\\Batch1_fr-FR_FE\\Trin-and-Tob-MSWORD_TXLF-fr-FR#FE_BPPJI#.docx.txlf",
+                "contentType": "application/octet-stream"
+              },
+              {
+                "name": "While there are no hard and fast rules about punctuation_New-MSWORD_TXLF-fr-FR#FE_BPPJL#.docx.txlf",
+                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_fr-FR\\Batch1_fr-FR_FE\\While there are no hard and fast rules about punctuation_New-MSWORD_TXLF-fr-FR#FE_BPPJL#.docx.txlf",
+                "contentType": "application/octet-stream"
+              }
+            ]
+          },
+          {
+            "name": "Batch1_fr-FR_Preview",
+            "type": "Preview",
+            "folders": [],
+            "files": [
+              {
+                "name": "PRELIM__adidas_FR-FR.doc",
+                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_fr-FR\\Batch1_fr-FR_Preview\\PRELIM__adidas_FR-FR.doc",
+                "contentType": "application/msword"
+              },
+              {
+                "name": "PRELIM__ALXN1720-MG-301 -   Subject Participation Card_FR-FR.docx",
+                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_fr-FR\\Batch1_fr-FR_Preview\\PRELIM__ALXN1720-MG-301 -   Subject Participation Card_FR-FR.docx",
+                "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+              },
+              {
+                "name": "PRELIM__Trin-and-Tob_FR-FR.docx",
+                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_fr-FR\\Batch1_fr-FR_Preview\\PRELIM__Trin-and-Tob_FR-FR.docx",
+                "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+              },
+              {
+                "name": "PRELIM__While there are no hard and fast rules about punctuation_New_FR-FR.docx",
+                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_fr-FR\\Batch1_fr-FR_Preview\\PRELIM__While there are no hard and fast rules about punctuation_New_FR-FR.docx",
+                "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+              }
+            ]
+          },
+          {
+            "name": "Batch1_fr-FR_SegmentReview",
+            "type": "SegmentReview",
+            "folders": [],
+            "files": [
+              {
+                "name": "SegmentReview_Report_Sub_107643_Batch1_en-US-fr-FR_segment review Proof2_1.html",
+                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_fr-FR\\Batch1_fr-FR_SegmentReview\\SegmentReview_Report_Sub_107643_Batch1_en-US-fr-FR_segment review Proof2_1.html",
+                "contentType": "text/html"
+              },
+              {
+                "name": "SegmentReview_Report_Sub_107643_Batch1_en-US-fr-FR_segment review Proof_1.html",
+                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_fr-FR\\Batch1_fr-FR_SegmentReview\\SegmentReview_Report_Sub_107643_Batch1_en-US-fr-FR_segment review Proof_1.html",
+                "contentType": "text/html"
+              }
+            ]
+          },
+          {
+            "name": "Batch1_fr-FR_Transcheck",
+            "type": "TransCheck",
+            "folders": [],
+            "files": [
+              {
+                "name": "Transcheck_Report_Sub_107643_Batch1_en-US-fr-FR_Proof.html",
+                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_fr-FR\\Batch1_fr-FR_Transcheck\\Transcheck_Report_Sub_107643_Batch1_en-US-fr-FR_Proof.html",
+                "contentType": "text/html"
+              },
+              {
+                "name": "Transcheck_Report_Sub_107643_Batch1_en-US-fr-FR_Proof2.html",
+                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_fr-FR\\Batch1_fr-FR_Transcheck\\Transcheck_Report_Sub_107643_Batch1_en-US-fr-FR_Proof2.html",
+                "contentType": "text/html"
+              }
+            ]
+          }
+        ],
+        "files": []
+      },
+      {
+        "name": "Sub_107643_Source",
+        "type": "Source",
+        "folders": [],
+        "files": [
+          {
+            "name": "adidas.doc",
+            "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_Source\\adidas.doc",
+            "contentType": "application/msword"
+          },
+          {
+            "name": "ALXN1720-MG-301 -   Subject Participation Card.docx",
+            "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_Source\\ALXN1720-MG-301 -   Subject Participation Card.docx",
+            "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          },
+          {
+            "name": "Trin-and-Tob.docx",
+            "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_Source\\Trin-and-Tob.docx",
+            "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          },
+          {
+            "name": "While there are no hard and fast rules about punctuation_New.docx",
+            "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_Source\\While there are no hard and fast rules about punctuation_New.docx",
+            "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          }
+        ]
+      }
+    ],
+    "files": []
+  }
+}

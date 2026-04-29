@@ -19,6 +19,11 @@ a {
   }
 }
 
+body {
+  font-family: 'Open Sans', 'Segoe UI', system-ui, sans-serif;
+  color: var(--text-primary);
+}
+
 .app-body {
   flex: 1;
   display: flex;
