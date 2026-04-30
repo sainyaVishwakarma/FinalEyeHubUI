@@ -54,34 +54,6 @@
         </a>
       </div>
 
-      <div
-        v-else-if="activeTab === 'referenceFiles'"
-        class="content-card content-card--report content-card--reference"
-      >
-        <h3>Reference Files</h3>
-        <p class="content-note">
-          The preferred reference file for current selection is shown in ONLYOFFICE viewer.
-        </p>
-        <p v-if="!selectedReferencePath" class="content-error">
-          No reference file mapped for current selection.
-        </p>
-        <template v-else>
-          <p class="content-note">
-            Showing: <strong>{{ selectedReferenceName }}</strong>
-          </p>
-          <div class="reference-viewer-wrapper">
-            <TPLoader v-if="referenceFileLoading" :size="LoaderSize.medium" />
-            <OnlyOfficeViewer
-              :key="`reference::${selectedReferencePath}`"
-              :download-id="selectedReferencePath"
-              :document-name="selectedReferenceName"
-              :is-view-only="true"
-              @toggle-loader="onReferenceViewerLoader"
-            />
-          </div>
-        </template>
-      </div>
-
       <div v-else-if="activeTab === 'clientInstructions'" class="content-card">
         <h3>Client Instructions</h3>
         <div
@@ -162,9 +134,6 @@
 import { computed, reactive, ref, watch } from 'vue';
 import { useOnlyOfficeSelectionStore } from '@/stores/onlyOfficeSelectionStore';
 import { useFinalEyeSubmissionStore } from '@/stores/finalEyeSubmissionStore';
-import TPLoader from '@/components/TPLoader.vue';
-import { LoaderSize } from '@/types/LoaderSize';
-import OnlyOfficeViewer from '@/components/only-office-viewer/OnlyOfficeViewer.vue';
 
 const activeTab = ref('transcheck');
 const transcheckReportHtml = ref('');
@@ -172,37 +141,11 @@ const transcheckLoadError = ref('');
 const segmentReviewReportHtml = ref('');
 const segmentReviewLoadError = ref('');
 const checklistCompletionMessage = ref('');
-const referenceFileLoading = ref(false);
 const { state: selectionState } = useOnlyOfficeSelectionStore();
 const { state: submissionState } = useFinalEyeSubmissionStore();
 
 const selectedTranscheckPath = computed(() => selectionState.transcheckReportPaths[0] ?? '');
 const selectedSegmentReviewPath = computed(() => selectionState.segmentReviewReportPaths[0] ?? '');
-const preferredReferenceFileName = 'StyleGuide_Clinical_All LPs.pdf';
-
-function getFileNameFromPath(path: string): string {
-  return path.split(/[\\/]/).pop() ?? '';
-}
-
-const selectedReferencePath = computed(() => {
-  const references = (() => {
-    if (selectionState.referenceFilePaths.length > 0) return selectionState.referenceFilePaths;
-    const targetFilePath = selectionState.targetFilePath;
-    if (!targetFilePath) return [];
-    for (const targets of Object.values(submissionState.targetFilesBySource)) {
-      const matchedTarget = targets.find((target) => target.path === targetFilePath);
-      if (matchedTarget) return matchedTarget.reports.referencePaths;
-    }
-    return [];
-  })();
-  if (references.length === 0) return '';
-  const matched = references.find((path) => getFileNameFromPath(path) === preferredReferenceFileName);
-  return matched ?? references[0];
-});
-
-const selectedReferenceName = computed(() =>
-  selectedReferencePath.value ? getFileNameFromPath(selectedReferencePath.value) : ''
-);
 
 const downloadFileBaseUrl = computed(() => {
   const explicit = (import.meta.env.VITE_FINALEYE_DOWNLOAD_URL || '').trim();
@@ -229,7 +172,6 @@ const segmentReviewReportPath = computed(() =>
 const tabs = [
   { id: 'transcheck', label: 'Transcheck File' },
   { id: 'segmentReview', label: 'Segment Review' },
-  { id: 'referenceFiles', label: 'Reference Files' },
   { id: 'clientInstructions', label: 'Client Instructions' },
   { id: 'feChecklist', label: 'FE Checklist' }
   // { id: 'transiq', label: 'TransIQ Report' },
@@ -546,10 +488,6 @@ function onFinishSubmission() {
   checklistCompletionMessage.value = 'Checklist complete. Submission is ready to finish.';
 }
 
-function onReferenceViewerLoader(visible: boolean) {
-  referenceFileLoading.value = visible;
-}
-
 function addBaseHref(html: string): string {
   const baseTag = `<base href="${window.location.origin}/">`;
   if (html.includes('<head>')) {
@@ -697,10 +635,6 @@ watch(
   min-height: min(75vh, 920px);
 }
 
-.content-card--reference {
-  height: min(75vh, 920px);
-}
-
 .content-card--checklist {
   display: flex;
   flex-direction: column;
@@ -822,24 +756,6 @@ watch(
   border: 1px solid #d1d5db;
   border-radius: 6px;
   background: #fff;
-}
-
-.reference-viewer-wrapper {
-  position: relative;
-  display: flex;
-  flex: 1;
-  min-height: 0;
-  height: 100%;
-  border: 1px solid #d1d5db;
-  border-radius: 6px;
-  overflow: hidden;
-  background: #fff;
-}
-
-.reference-viewer-wrapper :deep(.only-office-viewer) {
-  height: 100%;
-  min-height: 0;
-  flex: 1;
 }
 
 .content-link {

@@ -7,6 +7,7 @@ export const enum RoutePath {
   Dashboard = '/dashboard',
   Reports = '/reports',
   Viewer = '/viewer',
+  ReferenceGuidelinesReport = '/reference-guidelines-report',
   Txlf = '/txlf',
   Finalize = '/finalize',
 }

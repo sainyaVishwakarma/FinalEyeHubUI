@@ -8,6 +8,7 @@ import CollapseIcon from '@/assets/icons/CollapseIcon.vue'
 import router from '@/router'
 import OrganizationIcon from '@/assets/icons/OrganizationIcon.vue'
 import RoomsIcon from '@/assets/icons/RoomsIcon.vue'
+import GlobalLinkIcon from '@/assets/icons/GlobalLinkIcon.vue'
 
 const isCollapsed = ref(false)
 
@@ -26,6 +27,11 @@ const sideBarItems = [
     label: RouteName.Viewer,
     path: RoutePath.Viewer,
     icon: RoomsIcon,
+  },
+  {
+    label: RouteName.ReferenceGuidelinesReport,
+    path: RoutePath.ReferenceGuidelinesReport,
+    icon: GlobalLinkIcon,
   },
   {
     label: RouteName.Txlf,

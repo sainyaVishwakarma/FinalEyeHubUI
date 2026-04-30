@@ -22,6 +22,8 @@ interface ImportMetaEnv {
   readonly VITE_MATOMO_CLIENT_SITEID?: string;
   readonly VITE_DEBUG_MODE?: string;
   readonly VITE_ONLYOFFICE_VIEWER_USER_NAME?: string;
+  /** Base URL for the AI analysis service (e.g. `http://localhost:5001`). */
+  readonly VITE_AI_ANALYSIS_API_HOST?: string;
 }
 
 interface ImportMeta {

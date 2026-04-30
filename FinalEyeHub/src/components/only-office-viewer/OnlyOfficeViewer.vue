@@ -36,9 +36,8 @@ const docServerUrl = computed(() => {
 const downloadFileBaseUrl = computed(() => {
   const explicit = (import.meta.env.VITE_ONLYOFFICE_DOWNLOAD_URL || '').trim();
   if (explicit) return explicit.replace(/\/$/, '');
-  // const host = (import.meta.env.VITE_API_HOST || '').trim().replace(/\/$/, '');
-  // if (host) return `${host}/OnlyOffice/downloadfile`;
-  // console.log('downloadFileBaseUrl', host);
+  const host = (import.meta.env.VITE_API_HOST || '').trim().replace(/\/$/, '');
+  if (host) return `${host}/OnlyOffice/downloadfile`;
   return '';
 });
 
@@ -67,7 +66,6 @@ const documentKey = computed(() => {
 const documentUrl = computed(() => {
   const base = downloadFileBaseUrl.value;
   const id = encodeURIComponent(String(props.downloadId));
-  console.log('documentUrl', base, id);
   return `${base}?filePath=${id}&api-version=1`;
 });
 
@@ -147,6 +145,7 @@ const viewerConfig = computed<IConfig>(() => ({
 const tokenReady = ref(false);
 
 function logOnlyOfficeRequest(stage: 'init' | 'change') {
+  if (import.meta.env.VITE_DEBUG_MODE !== DebugModeState.ON) return;
   const filePathRaw = String(props.downloadId);
   const looksLikePath = filePathRaw.includes('\\') || filePathRaw.includes('/');
   console.info('[OnlyOfficeViewer] Request debug', {

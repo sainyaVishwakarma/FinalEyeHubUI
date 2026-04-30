@@ -31,6 +31,11 @@ const router = createRouter({
       component: () => import('@/views/Viewer.vue'),
     },
     {
+      path: RoutePath.ReferenceGuidelinesReport,
+      name: RouteName.ReferenceGuidelinesReport,
+      component: () => import('@/views/ReferenceGuidelinesReport.vue'),
+    },
+    {
       path: RoutePath.Txlf,
       name: RouteName.Txlf,
       component: () => import('@/views/Txlf.vue'),
