@@ -5,7 +5,7 @@ export const enum RouteName {
   Dashboard = 'Dashboard',
   Reports = 'Reports',
   Viewer = 'Viewer',
-  ReferenceGuidelinesReport = 'Guidelines report',
-  Txlf = 'Txlf',
+  ReferenceGuidelinesReport = 'AI Insights',
+  Txlf = 'TXLF Editor',
   Finalize = 'Finalize',
 }

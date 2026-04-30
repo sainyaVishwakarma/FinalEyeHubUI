@@ -135,9 +135,9 @@ const HARDCODED_TEST_TRANSCHECK_PATH =
 
 const selectedTranscheckPath = computed(() => {
   // TEMP: force testing with hardcoded report path.
-  return HARDCODED_TEST_TRANSCHECK_PATH;
+  // return HARDCODED_TEST_TRANSCHECK_PATH;
   // Revert after testing:
-  // return selectionState.transcheckReportPaths[0] ?? '';
+  return selectionState.transcheckReportPaths[0] ?? '';
 });
 
 function getPriorityClass(priority) {

@@ -24,6 +24,6 @@ export interface AiAnalysisResponse {
 
 export interface AiAnalysisRequest {
   referenceFolderPath: string;
-  targetFolderPath: string;
+  targetFilePath: string;
   additionalInstructions: string;
 }

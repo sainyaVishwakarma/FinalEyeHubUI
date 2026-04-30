@@ -6,16 +6,14 @@ const baseUrl = (import.meta.env.VITE_AI_ANALYSIS_API_HOST ?? 'http://localhost:
   ''
 );
 
-export async function analyzeGuidelinesFolders(
-  payload: AiAnalysisRequest
-): Promise<AiAnalysisResponse> {
+export async function analyzeGuidelinesFile(payload: AiAnalysisRequest): Promise<AiAnalysisResponse> {
   const { data } = await axios.post<AiAnalysisResponse>(
     `${baseUrl}/AiAnalysis/analyze`,
     payload,
     {
       params: { 'api-version': '1' },
       headers: {
-        Accept: 'application/json',
+        Accept: 'text/plain',
         'Content-Type': 'application/json'
       },
       timeout: 600_000
