@@ -15,6 +15,7 @@ interface FileOption {
     segmentReviewPaths: readonly string[];
     transiqPaths: readonly string[];
     glossaryPaths: readonly string[];
+    referencePaths: readonly string[];
   };
 }
 
@@ -28,6 +29,7 @@ interface SubmitSelectionPayload {
   segmentReviewReportPaths: string[];
   transiqReportPaths: string[];
   glossaryPaths: string[];
+  referenceFilePaths: string[];
 }
 
 const emit = defineEmits<{
@@ -117,6 +119,7 @@ function submitSelection() {
   const latestSegmentReviewPath = target?.reports?.segmentReviewPaths?.[0];
   const latestTransiqPath = target?.reports?.transiqPaths?.[0];
   const latestGlossaryPath = target?.reports?.glossaryPaths?.[0];
+  const referencePaths = target?.reports?.referencePaths ?? [];
 
   emit('submit-selection', {
     currentDocument: source?.fileName ?? '',
@@ -127,7 +130,8 @@ function submitSelection() {
     transcheckReportPaths: latestTranscheckPath ? [latestTranscheckPath] : [],
     segmentReviewReportPaths: latestSegmentReviewPath ? [latestSegmentReviewPath] : [],
     transiqReportPaths: latestTransiqPath ? [latestTransiqPath] : [],
-    glossaryPaths: latestGlossaryPath ? [latestGlossaryPath] : []
+    glossaryPaths: latestGlossaryPath ? [latestGlossaryPath] : [],
+    referenceFilePaths: [...referencePaths]
   });
 }
 </script>

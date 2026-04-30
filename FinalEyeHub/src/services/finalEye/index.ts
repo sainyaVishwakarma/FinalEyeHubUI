@@ -65,10 +65,14 @@ class FinalEyeService {
     });
   }
 
-  async getSubmissionInfo(submissionId: string): Promise<SubmissionFullResponse> {
+  async getSubmissionInfo(
+    submissionId: string,
+    options?: { isCallOnUpdate?: boolean }
+  ): Promise<SubmissionFullResponse> {
     const response = await this.client.get<SubmissionFullResponse>('/TransCheck/submission/full', {
       params: {
         submissionId,
+        ...(options?.isCallOnUpdate ? { isCallOnUpdate: true } : {}),
         'api-version': 1
       }
     });

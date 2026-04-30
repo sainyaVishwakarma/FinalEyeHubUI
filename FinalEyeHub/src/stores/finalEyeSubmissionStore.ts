@@ -19,11 +19,13 @@ export interface SubmissionTargetFile {
   contentType?: string;
   normalizedKey: string;
   language: string;
+  txlfPaths: string[];
   reports: {
     transcheckPaths: string[];
     segmentReviewPaths: string[];
     transiqPaths: string[];
     glossaryPaths: string[];
+    referencePaths: string[];
   };
 }
 
@@ -64,6 +66,13 @@ function normalizeFileNameForMatch(fileName: string): string {
   const withoutPrefix = stem.replace(/^PRELIM__/i, '');
   const withoutLangSuffix = withoutPrefix.replace(/_[a-z]{2}-[a-z]{2}$/i, '');
   return normalizeText(withoutLangSuffix);
+}
+
+function normalizeTxlfFileNameForMatch(fileName: string): string {
+  const stem = toFileStem(fileName);
+  const withoutTxlfSuffix = stem.replace(/[-_]msword[_-]txlf[-_][a-z]{2}-[a-z]{2}.*/i, '');
+  const withoutTxlfMarker = withoutTxlfSuffix.replace(/#.*$/, '');
+  return normalizeText(withoutTxlfMarker);
 }
 
 function toLanguageHint(fileName: string, path: string): string {
@@ -124,6 +133,13 @@ function extractReportPaths(subFolder: SubmissionFolderInfo, type: string): stri
   return files.map((file) => file.path);
 }
 
+function extractTxlfPaths(subFolder: SubmissionFolderInfo): string[] {
+  return subFolder.folders
+    .flatMap((folder) => folder.files)
+    .filter((file) => /\.txlf$/i.test(file.name))
+    .map((file) => file.path);
+}
+
 function extractLanguageFromPath(path: string): string {
   const match = path.match(/([a-z]{2}-[a-z]{2})/i);
   return match?.[1] ?? '';
@@ -170,12 +186,14 @@ function mapSourcesAndTargets(folderDetails: SubmissionFolderInfo | null): {
   });
 
   const targetFilesBySource: Record<string, SubmissionTargetFile[]> = {};
+  const referencePaths = collectFilesByFolderType(folderDetails, 'Reference').map((file) => file.path);
 
   for (const subFolder of folderDetails.folders) {
     const transcheckPaths = extractReportPaths(subFolder, 'TransCheck');
     const segmentReviewPaths = extractReportPaths(subFolder, 'SegmentReview');
     const transiqPaths = extractReportPaths(subFolder, 'TransIQ');
     const glossaryPaths = extractReportPaths(subFolder, 'Glossary');
+    const txlfPaths = extractTxlfPaths(subFolder);
 
     for (const nestedFolder of subFolder.folders) {
       if (normalizeText(nestedFolder.type) !== normalizeText('Preview')) continue;
@@ -191,6 +209,10 @@ function mapSourcesAndTargets(folderDetails: SubmissionFolderInfo | null): {
           contentType: file.contentType,
           normalizedKey,
           language: toLanguageHint(file.name, file.path),
+          txlfPaths: txlfPaths.filter(
+            (txlfPath) =>
+              normalizeTxlfFileNameForMatch(txlfPath.split('\\').pop() ?? '') === normalizedKey
+          ),
           reports: {
             transcheckPaths: sortReportPaths(
               transcheckPaths,
@@ -201,7 +223,8 @@ function mapSourcesAndTargets(folderDetails: SubmissionFolderInfo | null): {
               toLanguageHint(file.name, file.path)
             ),
             transiqPaths: sortReportPaths(transiqPaths, toLanguageHint(file.name, file.path)),
-            glossaryPaths: sortReportPaths(glossaryPaths, toLanguageHint(file.name, file.path))
+            glossaryPaths: sortReportPaths(glossaryPaths, toLanguageHint(file.name, file.path)),
+            referencePaths: sortReportPaths(referencePaths, toLanguageHint(file.name, file.path))
           }
         };
 
@@ -219,7 +242,10 @@ function mapSourcesAndTargets(folderDetails: SubmissionFolderInfo | null): {
 }
 
 export function useFinalEyeSubmissionStore() {
-  const fetchSubmissionInfo = async (submissionId: string) => {
+  const fetchSubmissionInfo = async (
+    submissionId: string,
+    options?: { isCallOnUpdate?: boolean }
+  ) => {
     const normalizedId = submissionId.trim();
     if (!normalizedId) return;
 
@@ -230,7 +256,7 @@ export function useFinalEyeSubmissionStore() {
     state.submissionId = normalizedId;
 
     try {
-      const response = await finalEyeService.getSubmissionInfo(normalizedId);
+      const response = await finalEyeService.getSubmissionInfo(normalizedId, options);
       state.submissionInfo = response;
       const { sourceFiles, targetFilesBySource } = mapSourcesAndTargets(
         normalizeFolderTree(response.folderDetails)

@@ -18,37 +18,37 @@
     ]
   },
   "folderDetails": {
-    "name": "9f448580-9494-4460-ab1e-8a5d9a2cd50a",
-    "type": "txlf",
+    "name": "30a599a6-23d3-4df2-a3d8-4680cc5ccd48",
+    "type": "Other",
     "folders": [
       {
         "name": "Sub_107643_de-DE",
-        "type": "txlf",
+        "type": "Other",
         "folders": [
           {
             "name": "Batch1_de-DE_FE",
-            "type": "txlf",
+            "type": "Txlf",
             "folders": [],
             "files": [
               {
                 "name": "adidas-MSWORD_TXLF-de-DE#FE_BPPJA#.doc.txlf",
-                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_de-DE\\Batch1_de-DE_FE\\adidas-MSWORD_TXLF-de-DE#FE_BPPJA#.doc.txlf",
-                "contentType": "application/octet-stream"
+                "path": "C:\\Temp\\Extracted\\30a599a6-23d3-4df2-a3d8-4680cc5ccd48\\Sub_107643_de-DE\\Batch1_de-DE_FE\\adidas-MSWORD_TXLF-de-DE#FE_BPPJA#.doc.txlf",
+                "contentType": "application/xliff+xml"
               },
               {
                 "name": "ALXN1720-MG-301 -   Subject Participation Card-MSWORD_TXLF-de-DE#FE_BPPJD#.docx.txlf",
-                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_de-DE\\Batch1_de-DE_FE\\ALXN1720-MG-301 -   Subject Participation Card-MSWORD_TXLF-de-DE#FE_BPPJD#.docx.txlf",
-                "contentType": "application/octet-stream"
+                "path": "C:\\Temp\\Extracted\\30a599a6-23d3-4df2-a3d8-4680cc5ccd48\\Sub_107643_de-DE\\Batch1_de-DE_FE\\ALXN1720-MG-301 -   Subject Participation Card-MSWORD_TXLF-de-DE#FE_BPPJD#.docx.txlf",
+                "contentType": "application/xliff+xml"
               },
               {
                 "name": "Trin-and-Tob-MSWORD_TXLF-de-DE#FE_BPPJG#.docx.txlf",
-                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_de-DE\\Batch1_de-DE_FE\\Trin-and-Tob-MSWORD_TXLF-de-DE#FE_BPPJG#.docx.txlf",
-                "contentType": "application/octet-stream"
+                "path": "C:\\Temp\\Extracted\\30a599a6-23d3-4df2-a3d8-4680cc5ccd48\\Sub_107643_de-DE\\Batch1_de-DE_FE\\Trin-and-Tob-MSWORD_TXLF-de-DE#FE_BPPJG#.docx.txlf",
+                "contentType": "application/xliff+xml"
               },
               {
                 "name": "While there are no hard and fast rules about punctuation_New-MSWORD_TXLF-de-DE#FE_BPPJJ#.docx.txlf",
-                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_de-DE\\Batch1_de-DE_FE\\While there are no hard and fast rules about punctuation_New-MSWORD_TXLF-de-DE#FE_BPPJJ#.docx.txlf",
-                "contentType": "application/octet-stream"
+                "path": "C:\\Temp\\Extracted\\30a599a6-23d3-4df2-a3d8-4680cc5ccd48\\Sub_107643_de-DE\\Batch1_de-DE_FE\\While there are no hard and fast rules about punctuation_New-MSWORD_TXLF-de-DE#FE_BPPJJ#.docx.txlf",
+                "contentType": "application/xliff+xml"
               }
             ]
           },
@@ -59,22 +59,22 @@
             "files": [
               {
                 "name": "PRELIM__adidas_DE-DE.doc",
-                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_de-DE\\Batch1_de-DE_Preview\\PRELIM__adidas_DE-DE.doc",
+                "path": "C:\\Temp\\Extracted\\30a599a6-23d3-4df2-a3d8-4680cc5ccd48\\Sub_107643_de-DE\\Batch1_de-DE_Preview\\PRELIM__adidas_DE-DE.doc",
                 "contentType": "application/msword"
               },
               {
                 "name": "PRELIM__ALXN1720-MG-301 -   Subject Participation Card_DE-DE.docx",
-                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_de-DE\\Batch1_de-DE_Preview\\PRELIM__ALXN1720-MG-301 -   Subject Participation Card_DE-DE.docx",
+                "path": "C:\\Temp\\Extracted\\30a599a6-23d3-4df2-a3d8-4680cc5ccd48\\Sub_107643_de-DE\\Batch1_de-DE_Preview\\PRELIM__ALXN1720-MG-301 -   Subject Participation Card_DE-DE.docx",
                 "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
               },
               {
                 "name": "PRELIM__Trin-and-Tob_DE-DE.docx",
-                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_de-DE\\Batch1_de-DE_Preview\\PRELIM__Trin-and-Tob_DE-DE.docx",
+                "path": "C:\\Temp\\Extracted\\30a599a6-23d3-4df2-a3d8-4680cc5ccd48\\Sub_107643_de-DE\\Batch1_de-DE_Preview\\PRELIM__Trin-and-Tob_DE-DE.docx",
                 "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
               },
               {
                 "name": "PRELIM__While there are no hard and fast rules about punctuation_New_DE-DE.docx",
-                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_de-DE\\Batch1_de-DE_Preview\\PRELIM__While there are no hard and fast rules about punctuation_New_DE-DE.docx",
+                "path": "C:\\Temp\\Extracted\\30a599a6-23d3-4df2-a3d8-4680cc5ccd48\\Sub_107643_de-DE\\Batch1_de-DE_Preview\\PRELIM__While there are no hard and fast rules about punctuation_New_DE-DE.docx",
                 "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
               }
             ]
@@ -86,12 +86,12 @@
             "files": [
               {
                 "name": "SegmentReview_Report_Sub_107643_Batch1_en-US-de-DE_segment review Proof2_1.html",
-                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_de-DE\\Batch1_de-DE_SegmentReview\\SegmentReview_Report_Sub_107643_Batch1_en-US-de-DE_segment review Proof2_1.html",
+                "path": "C:\\Temp\\Extracted\\30a599a6-23d3-4df2-a3d8-4680cc5ccd48\\Sub_107643_de-DE\\Batch1_de-DE_SegmentReview\\SegmentReview_Report_Sub_107643_Batch1_en-US-de-DE_segment review Proof2_1.html",
                 "contentType": "text/html"
               },
               {
                 "name": "SegmentReview_Report_Sub_107643_Batch1_en-US-de-DE_segment review Proof_1.html",
-                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_de-DE\\Batch1_de-DE_SegmentReview\\SegmentReview_Report_Sub_107643_Batch1_en-US-de-DE_segment review Proof_1.html",
+                "path": "C:\\Temp\\Extracted\\30a599a6-23d3-4df2-a3d8-4680cc5ccd48\\Sub_107643_de-DE\\Batch1_de-DE_SegmentReview\\SegmentReview_Report_Sub_107643_Batch1_en-US-de-DE_segment review Proof_1.html",
                 "contentType": "text/html"
               }
             ]
@@ -103,12 +103,12 @@
             "files": [
               {
                 "name": "Transcheck_Report_Sub_107643_Batch1_en-US-de-DE_Proof.html",
-                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_de-DE\\Batch1_de-DE_Transcheck\\Transcheck_Report_Sub_107643_Batch1_en-US-de-DE_Proof.html",
+                "path": "C:\\Temp\\Extracted\\30a599a6-23d3-4df2-a3d8-4680cc5ccd48\\Sub_107643_de-DE\\Batch1_de-DE_Transcheck\\Transcheck_Report_Sub_107643_Batch1_en-US-de-DE_Proof.html",
                 "contentType": "text/html"
               },
               {
                 "name": "Transcheck_Report_Sub_107643_Batch1_en-US-de-DE_Proof2.html",
-                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_de-DE\\Batch1_de-DE_Transcheck\\Transcheck_Report_Sub_107643_Batch1_en-US-de-DE_Proof2.html",
+                "path": "C:\\Temp\\Extracted\\30a599a6-23d3-4df2-a3d8-4680cc5ccd48\\Sub_107643_de-DE\\Batch1_de-DE_Transcheck\\Transcheck_Report_Sub_107643_Batch1_en-US-de-DE_Proof2.html",
                 "contentType": "text/html"
               }
             ]
@@ -118,32 +118,32 @@
       },
       {
         "name": "Sub_107643_fr-FR",
-        "type": "txlf",
+        "type": "Other",
         "folders": [
           {
             "name": "Batch1_fr-FR_FE",
-            "type": "txlf",
+            "type": "Txlf",
             "folders": [],
             "files": [
               {
                 "name": "adidas-MSWORD_TXLF-fr-FR#FE_BPPJC#.doc.txlf",
-                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_fr-FR\\Batch1_fr-FR_FE\\adidas-MSWORD_TXLF-fr-FR#FE_BPPJC#.doc.txlf",
-                "contentType": "application/octet-stream"
+                "path": "C:\\Temp\\Extracted\\30a599a6-23d3-4df2-a3d8-4680cc5ccd48\\Sub_107643_fr-FR\\Batch1_fr-FR_FE\\adidas-MSWORD_TXLF-fr-FR#FE_BPPJC#.doc.txlf",
+                "contentType": "application/xliff+xml"
               },
               {
                 "name": "ALXN1720-MG-301 -   Subject Participation Card-MSWORD_TXLF-fr-FR#FE_BPPJF#.docx.txlf",
-                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_fr-FR\\Batch1_fr-FR_FE\\ALXN1720-MG-301 -   Subject Participation Card-MSWORD_TXLF-fr-FR#FE_BPPJF#.docx.txlf",
-                "contentType": "application/octet-stream"
+                "path": "C:\\Temp\\Extracted\\30a599a6-23d3-4df2-a3d8-4680cc5ccd48\\Sub_107643_fr-FR\\Batch1_fr-FR_FE\\ALXN1720-MG-301 -   Subject Participation Card-MSWORD_TXLF-fr-FR#FE_BPPJF#.docx.txlf",
+                "contentType": "application/xliff+xml"
               },
               {
                 "name": "Trin-and-Tob-MSWORD_TXLF-fr-FR#FE_BPPJI#.docx.txlf",
-                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_fr-FR\\Batch1_fr-FR_FE\\Trin-and-Tob-MSWORD_TXLF-fr-FR#FE_BPPJI#.docx.txlf",
-                "contentType": "application/octet-stream"
+                "path": "C:\\Temp\\Extracted\\30a599a6-23d3-4df2-a3d8-4680cc5ccd48\\Sub_107643_fr-FR\\Batch1_fr-FR_FE\\Trin-and-Tob-MSWORD_TXLF-fr-FR#FE_BPPJI#.docx.txlf",
+                "contentType": "application/xliff+xml"
               },
               {
                 "name": "While there are no hard and fast rules about punctuation_New-MSWORD_TXLF-fr-FR#FE_BPPJL#.docx.txlf",
-                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_fr-FR\\Batch1_fr-FR_FE\\While there are no hard and fast rules about punctuation_New-MSWORD_TXLF-fr-FR#FE_BPPJL#.docx.txlf",
-                "contentType": "application/octet-stream"
+                "path": "C:\\Temp\\Extracted\\30a599a6-23d3-4df2-a3d8-4680cc5ccd48\\Sub_107643_fr-FR\\Batch1_fr-FR_FE\\While there are no hard and fast rules about punctuation_New-MSWORD_TXLF-fr-FR#FE_BPPJL#.docx.txlf",
+                "contentType": "application/xliff+xml"
               }
             ]
           },
@@ -154,22 +154,22 @@
             "files": [
               {
                 "name": "PRELIM__adidas_FR-FR.doc",
-                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_fr-FR\\Batch1_fr-FR_Preview\\PRELIM__adidas_FR-FR.doc",
+                "path": "C:\\Temp\\Extracted\\30a599a6-23d3-4df2-a3d8-4680cc5ccd48\\Sub_107643_fr-FR\\Batch1_fr-FR_Preview\\PRELIM__adidas_FR-FR.doc",
                 "contentType": "application/msword"
               },
               {
                 "name": "PRELIM__ALXN1720-MG-301 -   Subject Participation Card_FR-FR.docx",
-                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_fr-FR\\Batch1_fr-FR_Preview\\PRELIM__ALXN1720-MG-301 -   Subject Participation Card_FR-FR.docx",
+                "path": "C:\\Temp\\Extracted\\30a599a6-23d3-4df2-a3d8-4680cc5ccd48\\Sub_107643_fr-FR\\Batch1_fr-FR_Preview\\PRELIM__ALXN1720-MG-301 -   Subject Participation Card_FR-FR.docx",
                 "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
               },
               {
                 "name": "PRELIM__Trin-and-Tob_FR-FR.docx",
-                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_fr-FR\\Batch1_fr-FR_Preview\\PRELIM__Trin-and-Tob_FR-FR.docx",
+                "path": "C:\\Temp\\Extracted\\30a599a6-23d3-4df2-a3d8-4680cc5ccd48\\Sub_107643_fr-FR\\Batch1_fr-FR_Preview\\PRELIM__Trin-and-Tob_FR-FR.docx",
                 "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
               },
               {
                 "name": "PRELIM__While there are no hard and fast rules about punctuation_New_FR-FR.docx",
-                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_fr-FR\\Batch1_fr-FR_Preview\\PRELIM__While there are no hard and fast rules about punctuation_New_FR-FR.docx",
+                "path": "C:\\Temp\\Extracted\\30a599a6-23d3-4df2-a3d8-4680cc5ccd48\\Sub_107643_fr-FR\\Batch1_fr-FR_Preview\\PRELIM__While there are no hard and fast rules about punctuation_New_FR-FR.docx",
                 "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
               }
             ]
@@ -181,12 +181,12 @@
             "files": [
               {
                 "name": "SegmentReview_Report_Sub_107643_Batch1_en-US-fr-FR_segment review Proof2_1.html",
-                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_fr-FR\\Batch1_fr-FR_SegmentReview\\SegmentReview_Report_Sub_107643_Batch1_en-US-fr-FR_segment review Proof2_1.html",
+                "path": "C:\\Temp\\Extracted\\30a599a6-23d3-4df2-a3d8-4680cc5ccd48\\Sub_107643_fr-FR\\Batch1_fr-FR_SegmentReview\\SegmentReview_Report_Sub_107643_Batch1_en-US-fr-FR_segment review Proof2_1.html",
                 "contentType": "text/html"
               },
               {
                 "name": "SegmentReview_Report_Sub_107643_Batch1_en-US-fr-FR_segment review Proof_1.html",
-                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_fr-FR\\Batch1_fr-FR_SegmentReview\\SegmentReview_Report_Sub_107643_Batch1_en-US-fr-FR_segment review Proof_1.html",
+                "path": "C:\\Temp\\Extracted\\30a599a6-23d3-4df2-a3d8-4680cc5ccd48\\Sub_107643_fr-FR\\Batch1_fr-FR_SegmentReview\\SegmentReview_Report_Sub_107643_Batch1_en-US-fr-FR_segment review Proof_1.html",
                 "contentType": "text/html"
               }
             ]
@@ -198,12 +198,12 @@
             "files": [
               {
                 "name": "Transcheck_Report_Sub_107643_Batch1_en-US-fr-FR_Proof.html",
-                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_fr-FR\\Batch1_fr-FR_Transcheck\\Transcheck_Report_Sub_107643_Batch1_en-US-fr-FR_Proof.html",
+                "path": "C:\\Temp\\Extracted\\30a599a6-23d3-4df2-a3d8-4680cc5ccd48\\Sub_107643_fr-FR\\Batch1_fr-FR_Transcheck\\Transcheck_Report_Sub_107643_Batch1_en-US-fr-FR_Proof.html",
                 "contentType": "text/html"
               },
               {
                 "name": "Transcheck_Report_Sub_107643_Batch1_en-US-fr-FR_Proof2.html",
-                "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_fr-FR\\Batch1_fr-FR_Transcheck\\Transcheck_Report_Sub_107643_Batch1_en-US-fr-FR_Proof2.html",
+                "path": "C:\\Temp\\Extracted\\30a599a6-23d3-4df2-a3d8-4680cc5ccd48\\Sub_107643_fr-FR\\Batch1_fr-FR_Transcheck\\Transcheck_Report_Sub_107643_Batch1_en-US-fr-FR_Proof2.html",
                 "contentType": "text/html"
               }
             ]
@@ -212,28 +212,45 @@
         "files": []
       },
       {
+        "name": "Sub_107643_Reference",
+        "type": "Reference",
+        "folders": [],
+        "files": [
+          {
+            "name": "StyleGuide_Clinical_All LPs.pdf",
+            "path": "C:\\Temp\\Extracted\\30a599a6-23d3-4df2-a3d8-4680cc5ccd48\\Sub_107643_Reference\\StyleGuide_Clinical_All LPs.pdf",
+            "contentType": "application/pdf"
+          },
+          {
+            "name": "TPT034 LG English USUK v4.0 (15)(1).pdf",
+            "path": "C:\\Temp\\Extracted\\30a599a6-23d3-4df2-a3d8-4680cc5ccd48\\Sub_107643_Reference\\TPT034 LG English USUK v4.0 (15)(1).pdf",
+            "contentType": "application/pdf"
+          }
+        ]
+      },
+      {
         "name": "Sub_107643_Source",
         "type": "Source",
         "folders": [],
         "files": [
           {
             "name": "adidas.doc",
-            "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_Source\\adidas.doc",
+            "path": "C:\\Temp\\Extracted\\30a599a6-23d3-4df2-a3d8-4680cc5ccd48\\Sub_107643_Source\\adidas.doc",
             "contentType": "application/msword"
           },
           {
             "name": "ALXN1720-MG-301 -   Subject Participation Card.docx",
-            "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_Source\\ALXN1720-MG-301 -   Subject Participation Card.docx",
+            "path": "C:\\Temp\\Extracted\\30a599a6-23d3-4df2-a3d8-4680cc5ccd48\\Sub_107643_Source\\ALXN1720-MG-301 -   Subject Participation Card.docx",
             "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
           },
           {
             "name": "Trin-and-Tob.docx",
-            "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_Source\\Trin-and-Tob.docx",
+            "path": "C:\\Temp\\Extracted\\30a599a6-23d3-4df2-a3d8-4680cc5ccd48\\Sub_107643_Source\\Trin-and-Tob.docx",
             "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
           },
           {
             "name": "While there are no hard and fast rules about punctuation_New.docx",
-            "path": "C:\\Temp\\Extracted\\9f448580-9494-4460-ab1e-8a5d9a2cd50a\\Sub_107643_Source\\While there are no hard and fast rules about punctuation_New.docx",
+            "path": "C:\\Temp\\Extracted\\30a599a6-23d3-4df2-a3d8-4680cc5ccd48\\Sub_107643_Source\\While there are no hard and fast rules about punctuation_New.docx",
             "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
           }
         ]

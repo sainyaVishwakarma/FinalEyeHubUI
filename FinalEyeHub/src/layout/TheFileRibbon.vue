@@ -15,6 +15,7 @@ interface SubmitSelectionPayload {
   segmentReviewReportPaths: string[];
   transiqReportPaths: string[];
   glossaryPaths: string[];
+  referenceFilePaths: string[];
 }
 
 const showModal = ref(false);

@@ -206,7 +206,7 @@ const openSegmentsCount = computed(
 const summaryCards = computed(() => [
   {
     title: 'Target Languages',
-    value: submissionState.submissionInfo?.submissionDetails?.targetLanguages?.length ?? '2'
+    value: submissionState.submissionInfo?.submissionDetails?.targetLanguages?.length ?? '0'
   },
   {
     title: 'Total Flagged Segments',

@@ -11,6 +11,7 @@ interface OnlyOfficeSelectionState {
   segmentReviewReportPaths: string[];
   transiqReportPaths: string[];
   glossaryPaths: string[];
+  referenceFilePaths: string[];
 }
 
 const state = reactive<OnlyOfficeSelectionState>({
@@ -22,7 +23,8 @@ const state = reactive<OnlyOfficeSelectionState>({
   transcheckReportPaths: [],
   segmentReviewReportPaths: [],
   transiqReportPaths: [],
-  glossaryPaths: []
+  glossaryPaths: [],
+  referenceFilePaths: []
 });
 
 interface UpdateSelectionPayload {
@@ -35,6 +37,7 @@ interface UpdateSelectionPayload {
   segmentReviewReportPaths?: string[];
   transiqReportPaths?: string[];
   glossaryPaths?: string[];
+  referenceFilePaths?: string[];
 }
 
 export function useOnlyOfficeSelectionStore() {
@@ -48,6 +51,7 @@ export function useOnlyOfficeSelectionStore() {
     state.segmentReviewReportPaths = payload.segmentReviewReportPaths ?? [];
     state.transiqReportPaths = payload.transiqReportPaths ?? [];
     state.glossaryPaths = payload.glossaryPaths ?? [];
+    state.referenceFilePaths = payload.referenceFilePaths ?? [];
   };
 
   const clearSelection = () => {
@@ -60,6 +64,7 @@ export function useOnlyOfficeSelectionStore() {
     state.segmentReviewReportPaths = [];
     state.transiqReportPaths = [];
     state.glossaryPaths = [];
+    state.referenceFilePaths = [];
   };
 
   return {
